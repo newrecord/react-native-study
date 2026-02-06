@@ -1,0 +1,29 @@
+{
+  "name": "RnApp",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/RnApp",
+  "targets": {
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx react-native start",
+        "cwd": "apps/RnApp"
+      }
+    },
+    "run-android": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx react-native run-android",
+        "cwd": "apps/RnApp"
+      }
+    },
+    "run-ios": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx react-native run-ios",
+        "cwd": "apps/RnApp"
+      }
+    }
+  }
+}

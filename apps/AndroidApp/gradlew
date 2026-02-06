@@ -1,0 +1,14 @@
+#!/bin/sh
+# Gradle wrapper script
+
+# Determine the Java command to use to start the JVM.
+JAVACMD="java"
+if [ -n "$JAVA_HOME" ] ; then
+    JAVACMD="$JAVA_HOME/bin/java"
+fi
+
+# Setup Gradle properties
+APP_HOME=$( cd "${APP_BASE_NAME%/*}" && pwd -P )
+CLASSPATH="$APP_HOME/gradle/wrapper/gradle-wrapper.jar"
+
+exec "$JAVACMD" -classpath "$CLASSPATH" org.gradle.wrapper.GradleWrapperMain "$@"

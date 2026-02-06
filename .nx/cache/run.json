@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx run-android AndroidApp",
+    "startTime": "2026-02-06T11:11:31.842Z",
+    "endTime": "2026-02-06T11:11:45.408Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "AndroidApp:run-android",
+      "target": "run-android",
+      "projectName": "AndroidApp",
+      "hash": "15579718456741721800",
+      "startTime": "2026-02-06T11:11:32.013Z",
+      "endTime": "2026-02-06T11:11:45.405Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

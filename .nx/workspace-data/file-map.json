@@ -1,0 +1,3720 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.6.10",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".nx/workspace-data/file-map.json",
+        "hash": "16957525376549869094"
+      },
+      {
+        "file": ".nx/workspace-data/lockfile.hash",
+        "hash": "4317196168611967629"
+      },
+      {
+        "file": "nx.json",
+        "hash": "9475652348278804089"
+      },
+      {
+        "file": ".nx/workspace-data/parsed-lock-file.json",
+        "hash": "17543548598993003349"
+      },
+      {
+        "file": "package.json",
+        "hash": "12458966771365864960"
+      },
+      {
+        "file": ".nx/workspace-data/project-graph.json",
+        "hash": "13948042349561075419"
+      },
+      {
+        "file": ".nx/workspace-data/nx_files.nxt",
+        "hash": "3346384436792017041"
+      },
+      {
+        "file": ".nx/workspace-data/source-maps.json",
+        "hash": "3154160605869637768"
+      },
+      {
+        "file": ".feature/PRD.md",
+        "hash": "8851955520896145301"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "13067640172728981425"
+      },
+      {
+        "file": ".claude/skills/SKILL.md",
+        "hash": "9582460461596358839"
+      }
+    ],
+    "projectFileMap": {
+      "AndroidApp": [
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/checksums/checksums.lock",
+          "hash": "5580780202607044165"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/checksums/md5-checksums.bin",
+          "hash": "3983275171737157302"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/checksums/sha1-checksums.bin",
+          "hash": "881015346796449759"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidPluginAccessors.class",
+          "hash": "6787458512655402005"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxActivityLibraryAccessors.class",
+          "hash": "15833436302094913754"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxComposeLibraryAccessors.class",
+          "hash": "12115853312685058479"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxCoreLibraryAccessors.class",
+          "hash": "17806989752752552678"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxLibraryAccessors.class",
+          "hash": "12928978042591098670"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxLifecycleLibraryAccessors.class",
+          "hash": "4642578971498986927"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxLifecycleRuntimeLibraryAccessors.class",
+          "hash": "18087539269046405782"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxMaterialIconsLibraryAccessors.class",
+          "hash": "14089788318353465800"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxMaterialLibraryAccessors.class",
+          "hash": "5592971480652477735"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxNavigationLibraryAccessors.class",
+          "hash": "6866678594623151714"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxUiLibraryAccessors.class",
+          "hash": "11352989861672827900"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxUiToolingLibraryAccessors.class",
+          "hash": "13774507738118585198"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$BundleAccessors.class",
+          "hash": "1105009144213143162"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$HiltAndroidLibraryAccessors.class",
+          "hash": "7594322611316968375"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$HiltLibraryAccessors.class",
+          "hash": "11421837226328820955"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$HiltNavigationLibraryAccessors.class",
+          "hash": "14272265885321263266"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$HiltPluginAccessors.class",
+          "hash": "15326326703332349367"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$KotlinPluginAccessors.class",
+          "hash": "6279276302579146656"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$PluginAccessors.class",
+          "hash": "16063845053656160686"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs$VersionAccessors.class",
+          "hash": "17812447045024903175"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibs.class",
+          "hash": "17374422633431646386"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidPluginAccessors.class",
+          "hash": "1915971795464502560"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxActivityLibraryAccessors.class",
+          "hash": "1279951711498419037"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxComposeLibraryAccessors.class",
+          "hash": "4741380370837863899"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxCoreLibraryAccessors.class",
+          "hash": "17106931178246477259"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxLibraryAccessors.class",
+          "hash": "1898219485632405081"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxLifecycleLibraryAccessors.class",
+          "hash": "6775268680417734740"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxLifecycleRuntimeLibraryAccessors.class",
+          "hash": "14440236785438060922"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxMaterialIconsLibraryAccessors.class",
+          "hash": "9811297517313211041"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxMaterialLibraryAccessors.class",
+          "hash": "9780769535104628621"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxNavigationLibraryAccessors.class",
+          "hash": "12630791813791638925"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxUiLibraryAccessors.class",
+          "hash": "5829547622548509598"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxUiToolingLibraryAccessors.class",
+          "hash": "14928397995185744584"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$BundleAccessors.class",
+          "hash": "807626752946955287"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$HiltAndroidLibraryAccessors.class",
+          "hash": "8889178094325575174"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$HiltLibraryAccessors.class",
+          "hash": "13165074513031472376"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$HiltNavigationLibraryAccessors.class",
+          "hash": "11798087114074212150"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$HiltPluginAccessors.class",
+          "hash": "11584503238168736990"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$KotlinPluginAccessors.class",
+          "hash": "6575370058878179039"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$PluginAccessors.class",
+          "hash": "12640696173285985504"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$VersionAccessors.class",
+          "hash": "6200047041528510907"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.class",
+          "hash": "826176382824226123"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/metadata.bin",
+          "hash": "2618741002039021545"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/sources/org/gradle/accessors/dm/LibrariesForLibs.java",
+          "hash": "9292498406214936092"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/d6895cd1995800972c8f756b14b6656e5e32bde3/sources/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.java",
+          "hash": "11595275256016210806"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/dependencies-accessors/gc.properties",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/executionHistory/executionHistory.bin",
+          "hash": "17878275309193736201"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/executionHistory/executionHistory.lock",
+          "hash": "2712649454451527374"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/fileChanges/last-build.bin",
+          "hash": "14144645293874801883"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/fileHashes/fileHashes.bin",
+          "hash": "8684782130925607155"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/fileHashes/fileHashes.lock",
+          "hash": "4589699053802861788"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/fileHashes/resourceHashesCache.bin",
+          "hash": "8438381136440413853"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/8.9/gc.properties",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock",
+          "hash": "18362942784907791055"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/buildOutputCleanup/cache.properties",
+          "hash": "4906333611187082399"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/buildOutputCleanup/outputFiles.bin",
+          "hash": "6737350397094254109"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/file-system.probe",
+          "hash": "3118738714233644853"
+        },
+        {
+          "file": "apps/AndroidApp/.gradle/vcs-1/gc.properties",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/AndroidApp/app/build.gradle.kts",
+          "hash": "8100373490521453760"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/generated/hilt/component_sources/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC.java",
+          "hash": "461732920620815432"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/generated/hilt/component_sources/debug/com/example/androidapp/Hilt_MainApplication.java",
+          "hash": "8499849076576878716"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/generated/hilt/component_sources/debug/com/example/androidapp/MainApplication_HiltComponents.java",
+          "hash": "12331127692862688082"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/generated/hilt/component_trees/debug/com/example/androidapp/MainApplication_ComponentTreeDeps.java",
+          "hash": "2572855424664660911"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/generated/hilt/component_trees/debug/dagger/hilt/internal/processedrootsentinel/codegen/_com_example_androidapp_MainApplication.java",
+          "hash": "11685140275486863143"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/generated/ksp/debug/java/com/example/androidapp/Hilt_MainActivity.java",
+          "hash": "16243338116258284322"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/generated/ksp/debug/java/com/example/androidapp/MainActivity_GeneratedInjector.java",
+          "hash": "8221016592626540959"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/generated/ksp/debug/java/com/example/androidapp/MainApplication_GeneratedInjector.java",
+          "hash": "7904306160965582449"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/generated/ksp/debug/java/dagger/hilt/internal/aggregatedroot/codegen/_com_example_androidapp_MainApplication.java",
+          "hash": "7926040568382287154"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/generated/ksp/debug/java/hilt_aggregated_deps/_com_example_androidapp_MainActivity_GeneratedInjector.java",
+          "hash": "2577047073065597131"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/generated/ksp/debug/java/hilt_aggregated_deps/_com_example_androidapp_MainApplication_GeneratedInjector.java",
+          "hash": "12679919265009369228"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/generated/ksp/debug/java/hilt_aggregated_deps/_com_example_androidapp_di_AppModule.java",
+          "hash": "9491104407390623252"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/generated/source/buildConfig/debug/com/example/androidapp/BuildConfig.java",
+          "hash": "1659640747705454871"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json",
+          "hash": "10830094045779479443"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/apk_ide_redirect_file/debug/createDebugApkListingFileRedirect/redirect.txt",
+          "hash": "10491569824883394225"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/app_metadata/debug/writeDebugAppMetadata/app-metadata.properties",
+          "hash": "4777946618283286195"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/META-INF/app_debug.kotlin_module",
+          "hash": "12055573773637547619"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ComposableSingletons$MainActivityKt$lambda-1$1.class",
+          "hash": "11305829073607841548"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ComposableSingletons$MainActivityKt$lambda-2$1.class",
+          "hash": "4976336851253723183"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ComposableSingletons$MainActivityKt.class",
+          "hash": "11189114277856309969"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityCBuilder.class",
+          "hash": "6950570491622944351"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityCImpl.class",
+          "hash": "17942741463543888869"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityRetainedCBuilder.class",
+          "hash": "13154018468162843120"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityRetainedCImpl$SwitchingProvider.class",
+          "hash": "6502218719232838902"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityRetainedCImpl.class",
+          "hash": "11974943640696272828"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$Builder.class",
+          "hash": "678207259812891327"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$FragmentCBuilder.class",
+          "hash": "16290127584944149167"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$FragmentCImpl.class",
+          "hash": "13253469987693327860"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ServiceCBuilder.class",
+          "hash": "12439609854512271476"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ServiceCImpl.class",
+          "hash": "16775898340052830966"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$SingletonCImpl.class",
+          "hash": "8230952196533201455"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewCBuilder.class",
+          "hash": "9942350360720974736"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewCImpl.class",
+          "hash": "391973543120327354"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewModelCBuilder.class",
+          "hash": "17115276801467091708"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewModelCImpl.class",
+          "hash": "17773829962435658594"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewWithFragmentCBuilder.class",
+          "hash": "1133512185942134703"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewWithFragmentCImpl.class",
+          "hash": "6496931637382073554"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC.class",
+          "hash": "8944906402294377088"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/Hilt_MainActivity$1.class",
+          "hash": "13517962302254659356"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/Hilt_MainActivity.class",
+          "hash": "10124511326761802962"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/Hilt_MainApplication$1.class",
+          "hash": "9591790916443777610"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/Hilt_MainApplication.class",
+          "hash": "3705735596375408697"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainActivity.class",
+          "hash": "15269918154660902903"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainActivity_GeneratedInjector.class",
+          "hash": "11417658508194086943"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication.class",
+          "hash": "4963839208782418459"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_ComponentTreeDeps.class",
+          "hash": "8054322801081293507"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_GeneratedInjector.class",
+          "hash": "1935017503778152534"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ActivityC$Builder.class",
+          "hash": "1434561068982560719"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ActivityC.class",
+          "hash": "1335091899436843716"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ActivityCBuilderModule.class",
+          "hash": "17905525390621823770"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ActivityRetainedC$Builder.class",
+          "hash": "13453957419802894735"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ActivityRetainedC.class",
+          "hash": "501331790448276895"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ActivityRetainedCBuilderModule.class",
+          "hash": "3260753107193155791"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$FragmentC$Builder.class",
+          "hash": "13789549002626125926"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$FragmentC.class",
+          "hash": "6844236983647852478"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$FragmentCBuilderModule.class",
+          "hash": "17513011486603356953"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ServiceC$Builder.class",
+          "hash": "5784062753481565148"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ServiceC.class",
+          "hash": "6830397844625782078"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ServiceCBuilderModule.class",
+          "hash": "10003049322264655855"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$SingletonC.class",
+          "hash": "7688550234188045738"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ViewC$Builder.class",
+          "hash": "9316166194425513726"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ViewC.class",
+          "hash": "6051209781013674368"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ViewCBuilderModule.class",
+          "hash": "18285219948449850974"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ViewModelC$Builder.class",
+          "hash": "15873212427087903928"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ViewModelC.class",
+          "hash": "4471386967379283164"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ViewModelCBuilderModule.class",
+          "hash": "8740920574021036551"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ViewWithFragmentC$Builder.class",
+          "hash": "16661636891201572363"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ViewWithFragmentC.class",
+          "hash": "11086391121899926374"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents$ViewWithFragmentCBuilderModule.class",
+          "hash": "15245569353804309105"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/MainApplication_HiltComponents.class",
+          "hash": "7259062482167848683"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/di/AppModule.class",
+          "hash": "5497116691895328458"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/navigation/AppNavigationKt$AppNavigation$1.class",
+          "hash": "14496523060293835098"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/navigation/AppNavigationKt$AppNavigation$2.class",
+          "hash": "17149835690708009139"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/navigation/AppNavigationKt.class",
+          "hash": "2869394796517681951"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-1$1.class",
+          "hash": "7446403332895502615"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-2$1.class",
+          "hash": "11601767024014949164"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-3$1.class",
+          "hash": "14453059767970175270"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-4$1.class",
+          "hash": "856574259910628926"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-5$1.class",
+          "hash": "306633366439136206"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt.class",
+          "hash": "12929934053653615754"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ui/components/BottomNavBarKt$BottomNavBar$1$1$2.class",
+          "hash": "13016822078045505293"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ui/components/BottomNavBarKt$BottomNavBar$1$1$3.class",
+          "hash": "8313546168830778130"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ui/components/BottomNavBarKt$BottomNavBar$1.class",
+          "hash": "2400290182365637638"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ui/components/BottomNavBarKt.class",
+          "hash": "1936195250765325324"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ui/components/NavItem.class",
+          "hash": "7554076113444250462"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ui/screens/ChatScreenKt.class",
+          "hash": "10812645312931075663"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ui/screens/HistoryScreenKt.class",
+          "hash": "3974954854517097102"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ui/screens/HomeScreenKt.class",
+          "hash": "5741175810246358053"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ui/screens/SearchScreenKt.class",
+          "hash": "5253165702977170867"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ui/screens/SettingsScreenKt.class",
+          "hash": "17221349197491547198"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/com/example/androidapp/ui/theme/ThemeKt.class",
+          "hash": "15878169283122336759"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/dagger/hilt/internal/aggregatedroot/codegen/_com_example_androidapp_MainApplication.class",
+          "hash": "4074166581047455212"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/dagger/hilt/internal/processedrootsentinel/codegen/_com_example_androidapp_MainApplication.class",
+          "hash": "6252155423392520456"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/hilt_aggregated_deps/_com_example_androidapp_MainActivity_GeneratedInjector.class",
+          "hash": "11738889501596005087"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/hilt_aggregated_deps/_com_example_androidapp_MainApplication_GeneratedInjector.class",
+          "hash": "1239493700108798122"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/dirs/hilt_aggregated_deps/_com_example_androidapp_di_AppModule.class",
+          "hash": "7504812344598515822"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/classes/debug/transformDebugClassesWithAsm/jars/0.jar",
+          "hash": "15897215114547277502"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/compatible_screen_manifest/debug/createDebugCompatibleScreenManifests/output-metadata.json",
+          "hash": "8835481141224773829"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar",
+          "hash": "17249273852659257100"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_0/graph.bin",
+          "hash": "7962966324199224836"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_1/graph.bin",
+          "hash": "6664316558074187239"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_2/graph.bin",
+          "hash": "11144278389020182908"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_3/graph.bin",
+          "hash": "4553654212189059161"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_4/graph.bin",
+          "hash": "14249605386266306058"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_5/graph.bin",
+          "hash": "849620156625202146"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_6/graph.bin",
+          "hash": "14989620337425573458"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_7/graph.bin",
+          "hash": "7069758711599980805"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_8/graph.bin",
+          "hash": "9721614326603465097"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_9/graph.bin",
+          "hash": "4020301759368628958"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_7e2672903b8ccb18aaa78772a69ccaaf250b2cb579f3557dc5d37155ad6c3601_bucket_0/graph.bin",
+          "hash": "15595562522157756655"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_7e2672903b8ccb18aaa78772a69ccaaf250b2cb579f3557dc5d37155ad6c3601_bucket_1/graph.bin",
+          "hash": "15595562522157756655"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_7e2672903b8ccb18aaa78772a69ccaaf250b2cb579f3557dc5d37155ad6c3601_bucket_2/graph.bin",
+          "hash": "15595562522157756655"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_7e2672903b8ccb18aaa78772a69ccaaf250b2cb579f3557dc5d37155ad6c3601_bucket_3/graph.bin",
+          "hash": "15595562522157756655"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_7e2672903b8ccb18aaa78772a69ccaaf250b2cb579f3557dc5d37155ad6c3601_bucket_4/graph.bin",
+          "hash": "15595562522157756655"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_7e2672903b8ccb18aaa78772a69ccaaf250b2cb579f3557dc5d37155ad6c3601_bucket_5/graph.bin",
+          "hash": "15595562522157756655"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_7e2672903b8ccb18aaa78772a69ccaaf250b2cb579f3557dc5d37155ad6c3601_bucket_6/graph.bin",
+          "hash": "15595562522157756655"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_7e2672903b8ccb18aaa78772a69ccaaf250b2cb579f3557dc5d37155ad6c3601_bucket_7/graph.bin",
+          "hash": "15595562522157756655"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_7e2672903b8ccb18aaa78772a69ccaaf250b2cb579f3557dc5d37155ad6c3601_bucket_8/graph.bin",
+          "hash": "15595562522157756655"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_7e2672903b8ccb18aaa78772a69ccaaf250b2cb579f3557dc5d37155ad6c3601_bucket_9/graph.bin",
+          "hash": "15595562522157756655"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex",
+          "hash": "14343680623443564740"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex",
+          "hash": "12716063208158847079"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex",
+          "hash": "8770508958577361920"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex",
+          "hash": "8549868694956249374"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex",
+          "hash": "2904486661290693015"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex",
+          "hash": "14620907084750619872"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex",
+          "hash": "5486764005980328980"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/15/classes.dex",
+          "hash": "1846283807127615565"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex",
+          "hash": "7279377411274311882"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex",
+          "hash": "2245748782594588342"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex",
+          "hash": "8962546909387217038"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/dex_archive_input_jar_hashes/debug/dexBuilderDebug/out",
+          "hash": "1347966869168183823"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/dex_number_of_buckets_file/debug/dexBuilderDebug/out",
+          "hash": "15017679864016259122"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityCBuilder.class",
+          "hash": "6950570491622944351"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityCImpl.class",
+          "hash": "17942741463543888869"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityRetainedCBuilder.class",
+          "hash": "13154018468162843120"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityRetainedCImpl$SwitchingProvider.class",
+          "hash": "6502218719232838902"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityRetainedCImpl.class",
+          "hash": "11974943640696272828"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$Builder.class",
+          "hash": "678207259812891327"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$FragmentCBuilder.class",
+          "hash": "16290127584944149167"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$FragmentCImpl.class",
+          "hash": "13253469987693327860"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ServiceCBuilder.class",
+          "hash": "12439609854512271476"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ServiceCImpl.class",
+          "hash": "16775898340052830966"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$SingletonCImpl.class",
+          "hash": "8230952196533201455"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewCBuilder.class",
+          "hash": "9942350360720974736"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewCImpl.class",
+          "hash": "391973543120327354"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewModelCBuilder.class",
+          "hash": "17115276801467091708"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewModelCImpl.class",
+          "hash": "17773829962435658594"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewWithFragmentCBuilder.class",
+          "hash": "1133512185942134703"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewWithFragmentCImpl.class",
+          "hash": "6496931637382073554"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC.class",
+          "hash": "8944906402294377088"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/Hilt_MainApplication$1.class",
+          "hash": "9591790916443777610"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/Hilt_MainApplication.class",
+          "hash": "3705735596375408697"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_ComponentTreeDeps.class",
+          "hash": "8054322801081293507"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ActivityC$Builder.class",
+          "hash": "1434561068982560719"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ActivityC.class",
+          "hash": "1335091899436843716"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ActivityCBuilderModule.class",
+          "hash": "17905525390621823770"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ActivityRetainedC$Builder.class",
+          "hash": "13453957419802894735"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ActivityRetainedC.class",
+          "hash": "501331790448276895"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ActivityRetainedCBuilderModule.class",
+          "hash": "3260753107193155791"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$FragmentC$Builder.class",
+          "hash": "13789549002626125926"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$FragmentC.class",
+          "hash": "6844236983647852478"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$FragmentCBuilderModule.class",
+          "hash": "17513011486603356953"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ServiceC$Builder.class",
+          "hash": "5784062753481565148"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ServiceC.class",
+          "hash": "6830397844625782078"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ServiceCBuilderModule.class",
+          "hash": "10003049322264655855"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$SingletonC.class",
+          "hash": "7688550234188045738"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ViewC$Builder.class",
+          "hash": "9316166194425513726"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ViewC.class",
+          "hash": "6051209781013674368"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ViewCBuilderModule.class",
+          "hash": "18285219948449850974"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ViewModelC$Builder.class",
+          "hash": "15873212427087903928"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ViewModelC.class",
+          "hash": "4471386967379283164"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ViewModelCBuilderModule.class",
+          "hash": "8740920574021036551"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ViewWithFragmentC$Builder.class",
+          "hash": "16661636891201572363"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ViewWithFragmentC.class",
+          "hash": "11086391121899926374"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents$ViewWithFragmentCBuilderModule.class",
+          "hash": "15245569353804309105"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/com/example/androidapp/MainApplication_HiltComponents.class",
+          "hash": "7259062482167848683"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/hilt/component_classes/debug/dagger/hilt/internal/processedrootsentinel/codegen/_com_example_androidapp_MainApplication.class",
+          "hash": "6252155423392520456"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state",
+          "hash": "13580032698966877723"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/+0Jj1+LK_se5eGUCXdhDP9rNvAk=",
+          "hash": "1412210116182034841"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/+BDix6RL5_8Txijawpe5FRWpgRo=",
+          "hash": "4997977010259537977"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/04T7kn+_ULZnXd6xSBwyZIlohKY=",
+          "hash": "17232805002684987501"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/08LLCmPwb2o+1NTNxVvMV6Ej06M=",
+          "hash": "12602232358701268287"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/0rwAXV6+wz8WWl9lYcomVE38rTE=",
+          "hash": "8746807003202087815"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/1QywoPbji4RBV_F3q0jRsaGIoGM=",
+          "hash": "15979362247264232817"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/1WBnHNU3aRZsABvWS0z29P3N9LU=",
+          "hash": "14122866940354359165"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/2JjsuFNnpC7e2TSz0Xw1I3EAZKU=",
+          "hash": "9338357225254406372"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/5f6NrSymtsWvwn9ItVjm2ob8drE=",
+          "hash": "1256645439210750628"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/6SgaZh8lsnE8jJjPV46NgYB0l1c=",
+          "hash": "15721079079493886469"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/8EaQE15vs5WV2cTRLOILD4tOXlo=",
+          "hash": "472157721451837215"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/8ul1T2IcC8Th5XDQhwVYo5eKRk4=",
+          "hash": "12577461469925486657"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/9ETiUtK0iaZkc5mu8KQqeBeNzDE=",
+          "hash": "10188762815978116806"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/9EdSelj6WIXKGFSF2Kk3GIZVN50=",
+          "hash": "7674697352192800040"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/9YDOMMTfa0nUYiKoiQfTKrHLW+s=",
+          "hash": "11056668483527866805"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/9cjkQciZTlzHi10jN+8W_3CnDYk=",
+          "hash": "2372747971794055827"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/9lUHnNMfOJS1V_TDODHUxnMCnUY=",
+          "hash": "8665592341700279815"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/AQuctDMD689gI4OFFGpxz9s0ndA=",
+          "hash": "16825762083506032078"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ATShUCloXWGM9h4XAR9NSUJb0rM=",
+          "hash": "11817226289157198564"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/AW87lL3JHTy0r4PZu98r3RWPa8k=",
+          "hash": "14779966243866771748"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/B1cCIiHohQcfvQl3dE+DuuXvn8A=",
+          "hash": "8365930963188501830"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/BmfUNMHm8q7xmHHYGIEtryfJHJc=",
+          "hash": "14416720859042761570"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/CsNhQVFPnxfjkYU4VL3M1GJzVDE=",
+          "hash": "6219776684722099164"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/DjsBpFTBfyjFyZlrbAzuNy5Wcwg=",
+          "hash": "8006640054340172243"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/EOBM0HqmLuAAfOx2GjO37ZCw_8o=",
+          "hash": "5948358040690867200"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/EhkCdqkdbA5FxMX3NZ_rsQcSFL8=",
+          "hash": "5113727703145885385"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/GjEyClmTgqSrZPhbzfcCeMvcs9Y=",
+          "hash": "9271178834608990194"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/K6JRnICUZPwvx1YfQo5d9LjEzb0=",
+          "hash": "11676922704592096272"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/L+VkEeCJeV64SzvhIJzTRQMHy3E=",
+          "hash": "4234285428431625333"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/LXKdvlDKcgUk+LFcYbTlvOvrgGc=",
+          "hash": "10606096859130844019"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/LeQ23qcZVfo30zJYEojZglUhk5k=",
+          "hash": "400752907309227791"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/N1SctfG80K1q_3uObrKxiLSEzEQ=",
+          "hash": "6891468084383062379"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/NILtla3LOMoRa88EuCVs_irxTHg=",
+          "hash": "2630754720813013800"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/NZWsqjf31MR1KapBvzlmb2DQcIk=",
+          "hash": "3368086155474245856"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/OIybpDVAZkM6J90XEm1vOlPpOYA=",
+          "hash": "2253669550427517916"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/PVS5zXhx+sX8DoW66W_F9aZkhYk=",
+          "hash": "6614490141432135635"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/QeGWw9R46MJZaY9K4iQL98PFL3w=",
+          "hash": "8771501039773335986"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/RrO5qg++FsHoCKeMA5E2YODLa6A=",
+          "hash": "13798026541292147787"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/S_fyfRsvWIvSoo940bMd0QhMFYI=",
+          "hash": "16008977650383079457"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/TAKyjQJ3puyptoYl3UCvGErTmD0=",
+          "hash": "272268010591196551"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/TQd_laqlyinXwl1PXtAGCak2iio=",
+          "hash": "7022201082399578661"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/TVKIUHmVqLaDpTAae0JherVK1iA=",
+          "hash": "12730609100586031367"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Tgh2M_SdpB6gCzXeVB9Z7k0UuP8=",
+          "hash": "13126843714647066226"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/TtAYWmC2moeIv7kvLiWvWtiIr_s=",
+          "hash": "14201036377042895080"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/VUaGrR+Dny_2X5EDrdZuPMmZgt8=",
+          "hash": "10354745974122727781"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/VgSjsrWCY6WpWO05BRjeyQbyfiE=",
+          "hash": "1297019027619268112"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/WSVqRgUqOpKUym0TGeDplQzkoi8=",
+          "hash": "2962218317378809709"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/XGu+pthruGMnN4+mlGDJeOrNBLU=",
+          "hash": "11853932897242804607"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/XOWGaPXfj7SgMAdrgZMRnJVUGQ4=",
+          "hash": "9115860181857924935"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Y2WW0TO0vaB1I2rFjTlkiITLf1c=",
+          "hash": "10119378728670170822"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/YIwoxYxeaxJgKmOpGvV8bKniR_c=",
+          "hash": "1260997466800979530"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ZGJEfFiS1EwHhUGsAdCEBxFIXj0=",
+          "hash": "11683176062494995713"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ZGvAnsfWqS8bPV8d8FhaHgC7rHE=",
+          "hash": "14806532411520855095"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ZLnf62f8IN6TKETOzjbbPtTUPa4=",
+          "hash": "18108715860067187242"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ZTY2Je1anNxkL36f9tB3QZOU7CA=",
+          "hash": "16894747460278751794"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ZWS47EMBrcoeFDCfMviKJxQOlUo=",
+          "hash": "6263089723060390956"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Zlw46EdApgnIaacaIcGl1ASBFLs=",
+          "hash": "17688017264354338193"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Zm5sjbJ9fkh3Xrc7X3abd7B7nJ0=",
+          "hash": "337886148074344872"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Zr_kD9hV6SsnoSDKA_Cbe6QOgTU=",
+          "hash": "12022558621456285134"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/_uMetOTHGJbp_fU8RxXIB_HGPU8=",
+          "hash": "5117584624974342821"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/c4JIro_dZvY6nSZq+OcGtnCwZ3Q=",
+          "hash": "6472581451414024491"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/dCmu3NCDBByAb1aAOhbWjm_VoLE=",
+          "hash": "16213346807117370839"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fZbgCpJimT43ZkMf01iRja6zxn8=",
+          "hash": "15212717246628210469"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/g2e5jsLmQIhNdjtMU02eoy5pSk4=",
+          "hash": "16592639654341964105"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/g9iMXMT19NG7ihGBS82uYETNmFo=",
+          "hash": "14077800971697895768"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/gYM4fgOWjfWzIfGcvTMluPB6PKw=",
+          "hash": "1004850563705196061"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/gjvuRILDehZDd7QDGwE4wcIVAgY=",
+          "hash": "14735112059369885985"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/gmknmmJDwzXMkpAh6PVAIWKoSPw=",
+          "hash": "1724947470651621667"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/khvuqOWweyTAdUnFAWLRbYiRSYs=",
+          "hash": "10877214890711765904"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/nB3gCZt62Mr2JIKeTmzjFCvqRk0=",
+          "hash": "15025358407142483754"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/oyu2F192XVP+61bzKfFgp8OYLi0=",
+          "hash": "7025166648516604442"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/p8N+OFN4ES39qkB+NhEwtiQEwoo=",
+          "hash": "3265778474995659332"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/q88jyOyZO9XGSGfB9Fdr8afOcbE=",
+          "hash": "3725075089880360168"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/qbEF+zxiHn1dZv_soHcWj7dAhLs=",
+          "hash": "3725075089880360168"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/s257MqaklPxT0jcvFzUhyQiPsjk=",
+          "hash": "5600426377761946694"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/sAE34_VwXgEohetbJM5qaCfXwmo=",
+          "hash": "704295746299128897"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/syy0hJQopPSEif+piXIExbtHA7I=",
+          "hash": "16875484810595347276"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/uuf6X8x8my_9aoLRVkms3O0pOLM=",
+          "hash": "861529628734183504"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/uwoSJv+K8A6gQu35R31K0ZlHFmU=",
+          "hash": "1154905681130820985"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/vMOEnFsIShtGtFpaYzer4jxyAjE=",
+          "hash": "16664089518379125334"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/w4_f5JJd8rMD0c9DvY058p3MOMc=",
+          "hash": "15144053587688577403"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/w_Ta5vwWFJCw66M6Nxd_OWl5Ezs=",
+          "hash": "14056074400582858283"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/xSBMEE8y4i6pmG+3wdR_kLGks_Y=",
+          "hash": "16643035899061714243"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/yOe04KiFJzEi1Tjd_PITftBizOs=",
+          "hash": "17917858251057822539"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/yRIsjJcoMemIV85s7iIt7AgL9L0=",
+          "hash": "1151276736850124128"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/zqnujyB_Lsrqv2B3R4+HuX4Nr_Y=",
+          "hash": "10729247148961144655"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties",
+          "hash": "15905653225812567478"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml",
+          "hash": "4477845475457493587"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug/mergeDebugResources/merger.xml",
+          "hash": "13881157546760248086"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties",
+          "hash": "11842086288594291546"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir/values/values.xml",
+          "hash": "5601291686339110866"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/debug/packageDebugResources/merger.xml",
+          "hash": "1946733186886878875"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/mergeDebugAssets/merger.xml",
+          "hash": "18019021692171435800"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml",
+          "hash": "2130361448435510294"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/mergeDebugShaders/merger.xml",
+          "hash": "17258532782489857857"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt",
+          "hash": "3837180368948884367"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources",
+          "hash": "7122245223010356413"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0",
+          "hash": "13680383190762100688"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/incremental/processDebugResources/resources-list-for-linked-resources-binary-format-debug.ap_.txt",
+          "hash": "8304122232684812954"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/java_res/debug/processDebugJavaRes/out/META-INF/app_debug.kotlin_module",
+          "hash": "12055573773637547619"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/androidapp/Hilt_MainActivity$1.class",
+          "hash": "13517962302254659356"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/androidapp/Hilt_MainActivity.class",
+          "hash": "10124511326761802962"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/androidapp/MainActivity_GeneratedInjector.class",
+          "hash": "11417658508194086943"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/androidapp/MainApplication_GeneratedInjector.class",
+          "hash": "1935017503778152534"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/dagger/hilt/internal/aggregatedroot/codegen/_com_example_androidapp_MainApplication.class",
+          "hash": "4074166581047455212"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/hilt_aggregated_deps/_com_example_androidapp_MainActivity_GeneratedInjector.class",
+          "hash": "11738889501596005087"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/hilt_aggregated_deps/_com_example_androidapp_MainApplication_GeneratedInjector.class",
+          "hash": "1239493700108798122"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/hilt_aggregated_deps/_com_example_androidapp_di_AppModule.class",
+          "hash": "7504812344598515822"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/linked-resources-binary-format-debug.ap_",
+          "hash": "1534622112948993086"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/output-metadata.json",
+          "hash": "7281946780081069262"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt",
+          "hash": "17133932096507715210"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/manifest_merge_blame_file/debug/processDebugMainManifest/manifest-merger-blame-debug-report.txt",
+          "hash": "16848700317389555090"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_java_res/debug/mergeDebugJavaResource/base.jar",
+          "hash": "14635287795034857837"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_manifest/debug/processDebugMainManifest/AndroidManifest.xml",
+          "hash": "9992146333284859378"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml",
+          "hash": "9992146333284859378"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_manifests/debug/processDebugManifest/output-metadata.json",
+          "hash": "8836765400060875814"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/arm64-v8a/libandroidx.graphics.path.so",
+          "hash": "16437626089942409211"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/armeabi-v7a/libandroidx.graphics.path.so",
+          "hash": "13100269123353704414"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86/libandroidx.graphics.path.so",
+          "hash": "9898277175441267147"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86_64/libandroidx.graphics.path.so",
+          "hash": "10356013013766971596"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_launcher_foreground.xml.flat",
+          "hash": "1963768380384503478"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-anydpi-v26_ic_launcher.xml.flat",
+          "hash": "1522630168916224129"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+          "hash": "12536692207239376909"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-af_values-af.arsc.flat",
+          "hash": "1322153532050380263"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-am_values-am.arsc.flat",
+          "hash": "9210449386793436062"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ar_values-ar.arsc.flat",
+          "hash": "5761459930749700294"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-as_values-as.arsc.flat",
+          "hash": "5055480115905180373"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-az_values-az.arsc.flat",
+          "hash": "17442784421154501843"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-b+sr+Latn_values-b+sr+Latn.arsc.flat",
+          "hash": "3691646760269570962"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-be_values-be.arsc.flat",
+          "hash": "173508911591550422"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-bg_values-bg.arsc.flat",
+          "hash": "8034887096699784972"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-bn_values-bn.arsc.flat",
+          "hash": "15498949597307555374"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-bs_values-bs.arsc.flat",
+          "hash": "8876765425375781660"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ca_values-ca.arsc.flat",
+          "hash": "13538277292581959093"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-cs_values-cs.arsc.flat",
+          "hash": "7003241784612823426"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-da_values-da.arsc.flat",
+          "hash": "12697889073987407197"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-de_values-de.arsc.flat",
+          "hash": "17033809646925801882"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-el_values-el.arsc.flat",
+          "hash": "13355641306993611843"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rAU_values-en-rAU.arsc.flat",
+          "hash": "8202036003756543607"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rCA_values-en-rCA.arsc.flat",
+          "hash": "9046399023997308864"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rGB_values-en-rGB.arsc.flat",
+          "hash": "9454933806268993783"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rIN_values-en-rIN.arsc.flat",
+          "hash": "17320910768686928357"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rXC_values-en-rXC.arsc.flat",
+          "hash": "15129013639566815312"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-es-rUS_values-es-rUS.arsc.flat",
+          "hash": "5278056870111546691"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-es_values-es.arsc.flat",
+          "hash": "11466244984000468582"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-et_values-et.arsc.flat",
+          "hash": "11914973354496614266"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-eu_values-eu.arsc.flat",
+          "hash": "11010863301085516169"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fa_values-fa.arsc.flat",
+          "hash": "5616359978473097796"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fi_values-fi.arsc.flat",
+          "hash": "7160867062418691415"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fr-rCA_values-fr-rCA.arsc.flat",
+          "hash": "11459962481389069408"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fr_values-fr.arsc.flat",
+          "hash": "10257780085293679803"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-gl_values-gl.arsc.flat",
+          "hash": "520445126996778036"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-gu_values-gu.arsc.flat",
+          "hash": "17451580857260347448"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hi_values-hi.arsc.flat",
+          "hash": "6662718765954392347"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hr_values-hr.arsc.flat",
+          "hash": "1394689006055462441"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hu_values-hu.arsc.flat",
+          "hash": "14115254653570426386"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hy_values-hy.arsc.flat",
+          "hash": "14049790796590637651"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-in_values-in.arsc.flat",
+          "hash": "11816252516900334633"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-is_values-is.arsc.flat",
+          "hash": "2103846784050107871"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-it_values-it.arsc.flat",
+          "hash": "18396314493639596939"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-iw_values-iw.arsc.flat",
+          "hash": "5737775082101729169"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ja_values-ja.arsc.flat",
+          "hash": "3545566495040113004"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ka_values-ka.arsc.flat",
+          "hash": "17249155967791497119"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-kk_values-kk.arsc.flat",
+          "hash": "15620504508049505694"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-km_values-km.arsc.flat",
+          "hash": "16446653306957783643"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-kn_values-kn.arsc.flat",
+          "hash": "13722428899089025835"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ko_values-ko.arsc.flat",
+          "hash": "18308224281951276360"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ky_values-ky.arsc.flat",
+          "hash": "16795009866898867195"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-lo_values-lo.arsc.flat",
+          "hash": "15758867479002589655"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-lt_values-lt.arsc.flat",
+          "hash": "6820781837352406797"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-lv_values-lv.arsc.flat",
+          "hash": "17391739681932293920"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-mk_values-mk.arsc.flat",
+          "hash": "5169661611408237343"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ml_values-ml.arsc.flat",
+          "hash": "14284578221209989570"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-mn_values-mn.arsc.flat",
+          "hash": "14005834471864468911"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-mr_values-mr.arsc.flat",
+          "hash": "16000491544705357156"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ms_values-ms.arsc.flat",
+          "hash": "14445435948510832826"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-my_values-my.arsc.flat",
+          "hash": "7349189300234599332"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-nb_values-nb.arsc.flat",
+          "hash": "8355362146845803371"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ne_values-ne.arsc.flat",
+          "hash": "3168184221257695746"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-nl_values-nl.arsc.flat",
+          "hash": "10804105288598143441"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-or_values-or.arsc.flat",
+          "hash": "14199616550358346059"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pa_values-pa.arsc.flat",
+          "hash": "3220137801818042776"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pl_values-pl.arsc.flat",
+          "hash": "2259201701224222894"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt-rBR_values-pt-rBR.arsc.flat",
+          "hash": "4454816866635773913"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt-rPT_values-pt-rPT.arsc.flat",
+          "hash": "295355137890043515"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt_values-pt.arsc.flat",
+          "hash": "15264891188699363731"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ro_values-ro.arsc.flat",
+          "hash": "4179890758243411200"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ru_values-ru.arsc.flat",
+          "hash": "801310319749807201"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-si_values-si.arsc.flat",
+          "hash": "12549781765953081200"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sk_values-sk.arsc.flat",
+          "hash": "8137676625779721480"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sl_values-sl.arsc.flat",
+          "hash": "17842753474901540201"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sq_values-sq.arsc.flat",
+          "hash": "2252904197382337210"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sr_values-sr.arsc.flat",
+          "hash": "4307040726143723609"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sv_values-sv.arsc.flat",
+          "hash": "8821852587160791915"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sw_values-sw.arsc.flat",
+          "hash": "11081479335080026378"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ta_values-ta.arsc.flat",
+          "hash": "16313010911711812005"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-te_values-te.arsc.flat",
+          "hash": "17576658377161828409"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-th_values-th.arsc.flat",
+          "hash": "11871395032370268637"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-tl_values-tl.arsc.flat",
+          "hash": "5284093316262328581"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-tr_values-tr.arsc.flat",
+          "hash": "8489606990667312481"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-uk_values-uk.arsc.flat",
+          "hash": "2359490758906387411"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ur_values-ur.arsc.flat",
+          "hash": "12522669860056323584"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-uz_values-uz.arsc.flat",
+          "hash": "6873763601319378881"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v21_values-v21.arsc.flat",
+          "hash": "12377129819604176107"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v30_values-v30.arsc.flat",
+          "hash": "8446003906848483370"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-vi_values-vi.arsc.flat",
+          "hash": "16593729304359311045"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rCN_values-zh-rCN.arsc.flat",
+          "hash": "4964457275600261721"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rHK_values-zh-rHK.arsc.flat",
+          "hash": "13368176767043009234"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rTW_values-zh-rTW.arsc.flat",
+          "hash": "14816838577187649974"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zu_values-zu.arsc.flat",
+          "hash": "5164192256375519279"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res/debug/mergeDebugResources/values_values.arsc.flat",
+          "hash": "18211060403550453755"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/mergeDebugResources.json",
+          "hash": "4622786984582134356"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-af.json",
+          "hash": "10277025236786053181"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-am.json",
+          "hash": "15747662124987485084"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ar.json",
+          "hash": "11895212257022294913"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-as.json",
+          "hash": "15468960018772325413"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-az.json",
+          "hash": "1180571344042444737"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-b+sr+Latn.json",
+          "hash": "9037790446172108633"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-be.json",
+          "hash": "11023170843818152595"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-bg.json",
+          "hash": "1881219027035718722"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-bn.json",
+          "hash": "15565468258701246672"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-bs.json",
+          "hash": "8150181382603384340"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ca.json",
+          "hash": "6012251466102289088"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-cs.json",
+          "hash": "8221798820460635501"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-da.json",
+          "hash": "13048693407125229865"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-de.json",
+          "hash": "16062886798345266607"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-el.json",
+          "hash": "2069655430135282234"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-en-rAU.json",
+          "hash": "5112424509341825110"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-en-rCA.json",
+          "hash": "7301535249379501212"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-en-rGB.json",
+          "hash": "4156720993507972678"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-en-rIN.json",
+          "hash": "9531369503941956839"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-en-rXC.json",
+          "hash": "17959812643873276512"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-es-rUS.json",
+          "hash": "2387268601703892032"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-es.json",
+          "hash": "16633290137107326217"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-et.json",
+          "hash": "17445390497111498152"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-eu.json",
+          "hash": "6170622644374432785"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-fa.json",
+          "hash": "1504868711424886502"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-fi.json",
+          "hash": "550191350383674144"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-fr-rCA.json",
+          "hash": "2260292207544510814"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-fr.json",
+          "hash": "16274229952287699247"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-gl.json",
+          "hash": "2182709731999153846"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-gu.json",
+          "hash": "8238871637040365734"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-hi.json",
+          "hash": "6417265955150395589"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-hr.json",
+          "hash": "6935631663343250518"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-hu.json",
+          "hash": "2392848641410143308"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-hy.json",
+          "hash": "3879010296000194867"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-in.json",
+          "hash": "1515216089465428504"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-is.json",
+          "hash": "18421695445173653069"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-it.json",
+          "hash": "16773349960429372794"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-iw.json",
+          "hash": "11984197074812396490"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ja.json",
+          "hash": "6737529787692745697"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ka.json",
+          "hash": "4402382831772817329"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-kk.json",
+          "hash": "7720620201316909945"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-km.json",
+          "hash": "17203603236213831590"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-kn.json",
+          "hash": "16030431558950497636"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ko.json",
+          "hash": "4104048899864287018"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ky.json",
+          "hash": "1649090746366271591"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-lo.json",
+          "hash": "11829953866602191349"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-lt.json",
+          "hash": "2122783223618936311"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-lv.json",
+          "hash": "7436166624787349123"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-mk.json",
+          "hash": "4773610354395981363"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ml.json",
+          "hash": "14299153760491074090"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-mn.json",
+          "hash": "4815378392158695036"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-mr.json",
+          "hash": "15213214011815603172"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ms.json",
+          "hash": "15083785410573683532"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-my.json",
+          "hash": "1121420861616372389"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-nb.json",
+          "hash": "15221294079734466182"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ne.json",
+          "hash": "11520696994657831902"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-nl.json",
+          "hash": "10187455180380369987"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-or.json",
+          "hash": "17599298451808319876"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-pa.json",
+          "hash": "17884860058012830245"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-pl.json",
+          "hash": "9815227232218178606"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-pt-rBR.json",
+          "hash": "6758586063410665877"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-pt-rPT.json",
+          "hash": "7245094580409406419"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-pt.json",
+          "hash": "6462445303603709211"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ro.json",
+          "hash": "18051426584368067033"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ru.json",
+          "hash": "15807556834879122274"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-si.json",
+          "hash": "7160164898873134671"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-sk.json",
+          "hash": "16659208045290257319"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-sl.json",
+          "hash": "18306828266121674498"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-sq.json",
+          "hash": "11834459934373031416"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-sr.json",
+          "hash": "7841731277350525635"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-sv.json",
+          "hash": "13656746203017876097"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-sw.json",
+          "hash": "1695083390626648879"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ta.json",
+          "hash": "5341470385022361140"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-te.json",
+          "hash": "11598702449978638784"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-th.json",
+          "hash": "16539373325065954314"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-tl.json",
+          "hash": "16666353167948387719"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-tr.json",
+          "hash": "13101283800406465560"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-uk.json",
+          "hash": "16209433611441866993"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ur.json",
+          "hash": "5311095252543884411"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-uz.json",
+          "hash": "9854594004594366556"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v21.json",
+          "hash": "13030877339892756929"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v30.json",
+          "hash": "1074248502755844792"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-vi.json",
+          "hash": "4340694812907789623"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-zh-rCN.json",
+          "hash": "17636519922309347177"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-zh-rHK.json",
+          "hash": "6884765014357469782"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-zh-rTW.json",
+          "hash": "7404905391884328832"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-zu.json",
+          "hash": "10694613450114212475"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values.json",
+          "hash": "9579176061054662717"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/single/mergeDebugResources.json",
+          "hash": "7886628105847441974"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json",
+          "hash": "9444422325801888874"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt",
+          "hash": "13809364651499828241"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/packaged_manifests/debug/processDebugManifestForPackage/AndroidManifest.xml",
+          "hash": "9992146333284859378"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/packaged_manifests/debug/processDebugManifestForPackage/output-metadata.json",
+          "hash": "9210269831536241324"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/packaged_res/debug/packageDebugResources/drawable/ic_launcher_foreground.xml",
+          "hash": "3069767738433818798"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-anydpi-v26/ic_launcher.xml",
+          "hash": "11786186518676638194"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-anydpi-v26/ic_launcher_round.xml",
+          "hash": "11786186518676638194"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/packaged_res/debug/packageDebugResources/values/values.xml",
+          "hash": "5601291686339110866"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/b7283e0941689d57b080e62f1622981cbe6b6d4d051224ab2de1a1b0c2b0597f_0.jar",
+          "hash": "5864724079828306651"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/b7283e0941689d57b080e62f1622981cbe6b6d4d051224ab2de1a1b0c2b0597f_1.jar",
+          "hash": "12323785064236215459"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/b7283e0941689d57b080e62f1622981cbe6b6d4d051224ab2de1a1b0c2b0597f_2.jar",
+          "hash": "12221783312798387062"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/b7283e0941689d57b080e62f1622981cbe6b6d4d051224ab2de1a1b0c2b0597f_3.jar",
+          "hash": "4344119912768096790"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/b7283e0941689d57b080e62f1622981cbe6b6d4d051224ab2de1a1b0c2b0597f_4.jar",
+          "hash": "855777404141094826"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/b7283e0941689d57b080e62f1622981cbe6b6d4d051224ab2de1a1b0c2b0597f_5.jar",
+          "hash": "8589330367203703744"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/b7283e0941689d57b080e62f1622981cbe6b6d4d051224ab2de1a1b0c2b0597f_6.jar",
+          "hash": "14247480902305425546"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/b7283e0941689d57b080e62f1622981cbe6b6d4d051224ab2de1a1b0c2b0597f_7.jar",
+          "hash": "8014644258728992010"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/b7283e0941689d57b080e62f1622981cbe6b6d4d051224ab2de1a1b0c2b0597f_8.jar",
+          "hash": "9981503340098897563"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/b7283e0941689d57b080e62f1622981cbe6b6d4d051224ab2de1a1b0c2b0597f_9.jar",
+          "hash": "17798759605985453764"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ComposableSingletons$MainActivityKt$lambda-1$1.dex",
+          "hash": "10999609102485176199"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ComposableSingletons$MainActivityKt$lambda-2$1.dex",
+          "hash": "17945098750283657049"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ComposableSingletons$MainActivityKt.dex",
+          "hash": "14313020653201385604"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityCBuilder.dex",
+          "hash": "561695123750777772"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityCImpl.dex",
+          "hash": "8722344363205802360"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityRetainedCBuilder.dex",
+          "hash": "13153107730573555393"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityRetainedCImpl$SwitchingProvider.dex",
+          "hash": "2905430597466740149"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ActivityRetainedCImpl.dex",
+          "hash": "812172849083646178"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$Builder.dex",
+          "hash": "13319847447226252351"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$FragmentCBuilder.dex",
+          "hash": "4447983130799226406"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$FragmentCImpl.dex",
+          "hash": "7864092164485211017"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ServiceCBuilder.dex",
+          "hash": "10791503256632011618"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ServiceCImpl.dex",
+          "hash": "6449392115669777802"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$SingletonCImpl.dex",
+          "hash": "6371364541240202720"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewCBuilder.dex",
+          "hash": "5925756144202499415"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewCImpl.dex",
+          "hash": "4434598997883655128"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewModelCBuilder.dex",
+          "hash": "2203982386919947171"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewModelCImpl.dex",
+          "hash": "17699532871022220451"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewWithFragmentCBuilder.dex",
+          "hash": "7343066161076579259"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC$ViewWithFragmentCImpl.dex",
+          "hash": "11740638588051526466"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/DaggerMainApplication_HiltComponents_SingletonC.dex",
+          "hash": "9965070762032895137"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/Hilt_MainActivity$1.dex",
+          "hash": "9766377985484091444"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/Hilt_MainActivity.dex",
+          "hash": "4981372461640351881"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/Hilt_MainApplication$1.dex",
+          "hash": "8210594666285573007"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/Hilt_MainApplication.dex",
+          "hash": "586038399467456763"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainActivity.dex",
+          "hash": "13125834552105535736"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainActivity_GeneratedInjector.dex",
+          "hash": "7454922578656204871"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication.dex",
+          "hash": "4286004305726144122"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_ComponentTreeDeps.dex",
+          "hash": "11386005218941742555"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_GeneratedInjector.dex",
+          "hash": "1012040149408937421"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ActivityC$Builder.dex",
+          "hash": "17301832668354524873"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ActivityC.dex",
+          "hash": "14369231279958228485"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ActivityCBuilderModule.dex",
+          "hash": "4424961824011774374"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ActivityRetainedC$Builder.dex",
+          "hash": "13194021038737159299"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ActivityRetainedC.dex",
+          "hash": "15591849342743819086"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ActivityRetainedCBuilderModule.dex",
+          "hash": "18324887362068157426"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$FragmentC$Builder.dex",
+          "hash": "834274639198357341"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$FragmentC.dex",
+          "hash": "9541324751557060645"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$FragmentCBuilderModule.dex",
+          "hash": "13237722598133466011"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ServiceC$Builder.dex",
+          "hash": "13440228055560109104"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ServiceC.dex",
+          "hash": "4354999478249283638"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ServiceCBuilderModule.dex",
+          "hash": "9644095458684190957"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$SingletonC.dex",
+          "hash": "7323776490872400784"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ViewC$Builder.dex",
+          "hash": "3735667474808946758"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ViewC.dex",
+          "hash": "20136586294267196"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ViewCBuilderModule.dex",
+          "hash": "3873939071364969002"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ViewModelC$Builder.dex",
+          "hash": "5534331938962820527"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ViewModelC.dex",
+          "hash": "17688974819989733904"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ViewModelCBuilderModule.dex",
+          "hash": "6553561356035629420"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ViewWithFragmentC$Builder.dex",
+          "hash": "5797565660621233631"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ViewWithFragmentC.dex",
+          "hash": "12917312711920113675"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents$ViewWithFragmentCBuilderModule.dex",
+          "hash": "3681771799105034782"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/MainApplication_HiltComponents.dex",
+          "hash": "2104057226701323372"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/di/AppModule.dex",
+          "hash": "17001070298122552765"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/navigation/AppNavigationKt$AppNavigation$1.dex",
+          "hash": "7276228390182548339"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/navigation/AppNavigationKt$AppNavigation$2.dex",
+          "hash": "13918372019741618930"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/navigation/AppNavigationKt.dex",
+          "hash": "14694814775689834668"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-1$1.dex",
+          "hash": "14189844364653160369"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-2$1.dex",
+          "hash": "10916719605544595945"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-3$1.dex",
+          "hash": "4712430470939156347"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-4$1.dex",
+          "hash": "18220858689494173822"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-5$1.dex",
+          "hash": "1436528016424530411"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt.dex",
+          "hash": "4267688964622959490"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ui/components/BottomNavBarKt$BottomNavBar$1$1$2.dex",
+          "hash": "2797829102915660596"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ui/components/BottomNavBarKt$BottomNavBar$1$1$3.dex",
+          "hash": "18275956030864987924"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ui/components/BottomNavBarKt$BottomNavBar$1.dex",
+          "hash": "1709818144933369853"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ui/components/BottomNavBarKt.dex",
+          "hash": "17521182885155685175"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ui/components/NavItem.dex",
+          "hash": "15241924510679818515"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ui/screens/ChatScreenKt.dex",
+          "hash": "14986245196792763414"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ui/screens/HistoryScreenKt.dex",
+          "hash": "16655532348142015959"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ui/screens/HomeScreenKt.dex",
+          "hash": "7400891196332520283"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ui/screens/SearchScreenKt.dex",
+          "hash": "13998216964124729191"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ui/screens/SettingsScreenKt.dex",
+          "hash": "8395444833169671897"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/androidapp/ui/theme/ThemeKt.dex",
+          "hash": "5883651392865164153"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/dagger/hilt/internal/aggregatedroot/codegen/_com_example_androidapp_MainApplication.dex",
+          "hash": "13145842961000165558"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/dagger/hilt/internal/processedrootsentinel/codegen/_com_example_androidapp_MainApplication.dex",
+          "hash": "9227247188318854334"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/hilt_aggregated_deps/_com_example_androidapp_MainActivity_GeneratedInjector.dex",
+          "hash": "4941572649939795232"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/hilt_aggregated_deps/_com_example_androidapp_MainApplication_GeneratedInjector.dex",
+          "hash": "10612235416406537987"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/hilt_aggregated_deps/_com_example_androidapp_di_AppModule.dex",
+          "hash": "14102053800787916157"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/runtime_symbol_list/debug/processDebugResources/R.txt",
+          "hash": "7715825620642136662"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/signing_config_versions/debug/writeDebugSigningConfigVersions/signing-config-versions.json",
+          "hash": "16207969368716178983"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/source_set_path_map/debug/mapDebugSourceSetPaths/file-map.txt",
+          "hash": "11245535066437352088"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/stable_resource_ids_file/debug/processDebugResources/stableIds.txt",
+          "hash": "6013039722663011377"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/stripped_native_libs/debug/stripDebugDebugSymbols/out/lib/arm64-v8a/libandroidx.graphics.path.so",
+          "hash": "16437626089942409211"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/stripped_native_libs/debug/stripDebugDebugSymbols/out/lib/armeabi-v7a/libandroidx.graphics.path.so",
+          "hash": "13100269123353704414"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/stripped_native_libs/debug/stripDebugDebugSymbols/out/lib/x86/libandroidx.graphics.path.so",
+          "hash": "9898277175441267147"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/stripped_native_libs/debug/stripDebugDebugSymbols/out/lib/x86_64/libandroidx.graphics.path.so",
+          "hash": "10356013013766971596"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/intermediates/symbol_list_with_package_name/debug/processDebugResources/package-aware-r.txt",
+          "hash": "9489756567932066533"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab",
+          "hash": "8435572371300293959"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream",
+          "hash": "9792792026227962851"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream.len",
+          "hash": "4213209790133696684"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.len",
+          "hash": "4797695795825784852"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at",
+          "hash": "2232907615027206520"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i",
+          "hash": "16574228464947437060"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab",
+          "hash": "12577457842295389329"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream",
+          "hash": "11012580845383698353"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len",
+          "hash": "5611925040449155970"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len",
+          "hash": "2434814208832848053"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at",
+          "hash": "1320932649662364873"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i",
+          "hash": "13992811739053185454"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab",
+          "hash": "2512221117900956080"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream",
+          "hash": "11012580845383698353"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len",
+          "hash": "5611925040449155970"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len",
+          "hash": "2434814208832848053"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at",
+          "hash": "1057772963012369808"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i",
+          "hash": "13992811739053185454"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab",
+          "hash": "14245419893637456495"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream",
+          "hash": "3151848837636333361"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len",
+          "hash": "9647392718295007969"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len",
+          "hash": "3172036047746227000"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at",
+          "hash": "3685971315019785908"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i",
+          "hash": "628114375907203282"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab",
+          "hash": "476620846089795411"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream",
+          "hash": "14761579814751750042"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream.len",
+          "hash": "13646685213331054057"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.len",
+          "hash": "16046210278702171128"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.values.at",
+          "hash": "1157812194265364441"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i",
+          "hash": "8487213597527630396"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab",
+          "hash": "2075492086293602834"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream",
+          "hash": "1544329558966367278"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len",
+          "hash": "17704797446942949513"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.len",
+          "hash": "3321813391228894040"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at",
+          "hash": "11723517189840985111"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i",
+          "hash": "16001352037920897511"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab",
+          "hash": "2420432863416194282"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream",
+          "hash": "9792792026227962851"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len",
+          "hash": "4213209790133696684"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len",
+          "hash": "4797695795825784852"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at",
+          "hash": "8820004631944590281"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i",
+          "hash": "16574228464947437060"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab",
+          "hash": "13532954139335696761"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream",
+          "hash": "17782735875455755916"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len",
+          "hash": "13905029865866827276"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len",
+          "hash": "2022194602335062571"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at",
+          "hash": "2373929075719084683"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i",
+          "hash": "669560551609771321"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab",
+          "hash": "14892776033618265842"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream",
+          "hash": "17285497967514151509"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len",
+          "hash": "9267576055755882193"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len",
+          "hash": "2022194602335062571"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at",
+          "hash": "4678650976671859279"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i",
+          "hash": "2858167924853718565"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab",
+          "hash": "12828509297190888598"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab",
+          "hash": "1301638512804448952"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream",
+          "hash": "9792792026227962851"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len",
+          "hash": "4213209790133696684"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.len",
+          "hash": "4797695795825784852"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at",
+          "hash": "6432861074083445061"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i",
+          "hash": "16574228464947437060"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab",
+          "hash": "5405496836702406196"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream",
+          "hash": "17386660384321276403"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len",
+          "hash": "15379833085768375682"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len",
+          "hash": "4797695795825784852"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at",
+          "hash": "8295015120790438645"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i",
+          "hash": "9345432094372441414"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab",
+          "hash": "10971844591388497874"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream",
+          "hash": "6519701390408375776"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len",
+          "hash": "705939338780180746"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.len",
+          "hash": "43852175400408145"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at",
+          "hash": "9660125004453810829"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i",
+          "hash": "2173152183677875167"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/cacheable/last-build.bin",
+          "hash": "16330692924419236376"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin",
+          "hash": "13138617441214518811"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin",
+          "hash": "4023988271816402245"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/ap-classpath-entries.bin",
+          "hash": "4140528394833921830"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/backups/java/byRounds/1/com/example/androidapp/Hilt_MainActivity.java",
+          "hash": "16243338116258284322"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/backups/java/byRounds/1/com/example/androidapp/MainActivity_GeneratedInjector.java",
+          "hash": "8221016592626540959"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/backups/java/byRounds/1/com/example/androidapp/MainApplication_GeneratedInjector.java",
+          "hash": "7904306160965582449"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/backups/java/byRounds/1/dagger/hilt/internal/aggregatedroot/codegen/_com_example_androidapp_MainApplication.java",
+          "hash": "7926040568382287154"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/backups/java/byRounds/1/hilt_aggregated_deps/_com_example_androidapp_di_AppModule.java",
+          "hash": "9491104407390623252"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/backups/java/byRounds/2/hilt_aggregated_deps/_com_example_androidapp_MainActivity_GeneratedInjector.java",
+          "hash": "2577047073065597131"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/backups/java/byRounds/2/hilt_aggregated_deps/_com_example_androidapp_MainApplication_GeneratedInjector.java",
+          "hash": "12679919265009369228"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/caches.uptodate",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/counters.tab",
+          "hash": "14081711807222659024"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/file-to-id.tab",
+          "hash": "11621783715251725785"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/file-to-id.tab.keystream",
+          "hash": "15864068034000784593"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/file-to-id.tab.keystream.len",
+          "hash": "11817514817988723839"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/file-to-id.tab.len",
+          "hash": "17308095543857434056"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/file-to-id.tab.values.at",
+          "hash": "3218905731700359689"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/file-to-id.tab_i",
+          "hash": "10060836661113892666"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/file-to-id.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/id-to-file.tab",
+          "hash": "378223526962302149"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/id-to-file.tab.keystream",
+          "hash": "10653106456947493306"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/id-to-file.tab.keystream.len",
+          "hash": "17540194650411207667"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/id-to-file.tab.len",
+          "hash": "17308095543857434056"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/id-to-file.tab.values.at",
+          "hash": "6593945812431867247"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/id-to-file.tab_i.len",
+          "hash": "14374147212387527897"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/lookups.tab",
+          "hash": "14072458353147346425"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/lookups.tab.keystream",
+          "hash": "14251377649871709468"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/lookups.tab.keystream.len",
+          "hash": "3723400802336444025"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/lookups.tab.len",
+          "hash": "14108402718548887199"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/lookups.tab.values.at",
+          "hash": "18236771665346235057"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/lookups.tab_i",
+          "hash": "7658952941554769686"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classLookups/lookups.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classpath-entries.bin",
+          "hash": "10453625532537788783"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/classpath-structure.bin",
+          "hash": "9882659348406668021"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/sealed",
+          "hash": "1389868326933519382"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/sourceToOutputs",
+          "hash": "16415656704059028189"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/counters.tab",
+          "hash": "6653880661484801566"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/file-to-id.tab",
+          "hash": "13458304132548670385"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/file-to-id.tab.keystream",
+          "hash": "14041562508116025232"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/file-to-id.tab.keystream.len",
+          "hash": "4335344970328640904"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/file-to-id.tab.len",
+          "hash": "673021735869262155"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/file-to-id.tab.values.at",
+          "hash": "2697203502310774495"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/file-to-id.tab_i",
+          "hash": "5468474664460092953"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/file-to-id.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/id-to-file.tab",
+          "hash": "17545986238989849500"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/id-to-file.tab.keystream",
+          "hash": "8645536770802268419"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/id-to-file.tab.keystream.len",
+          "hash": "5482098055826334146"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/id-to-file.tab.len",
+          "hash": "673021735869262155"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/id-to-file.tab.values.at",
+          "hash": "3121920543383487045"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/id-to-file.tab_i",
+          "hash": "12178740941470401193"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/id-to-file.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/lookups.tab",
+          "hash": "5989285689596254319"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/lookups.tab.keystream",
+          "hash": "17574156673023186966"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/lookups.tab.keystream.len",
+          "hash": "2653052866539387373"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/lookups.tab.len",
+          "hash": "10079391593350109602"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/lookups.tab.values.at",
+          "hash": "827221402758121571"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/lookups.tab_i",
+          "hash": "12572916330422400991"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbolLookups/lookups.tab_i.len",
+          "hash": "10386380381872154338"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/kspCaches/debug/symbols",
+          "hash": "6736090671794365072"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/outputs/apk/debug/app-debug.apk",
+          "hash": "11248336003062197739"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/outputs/apk/debug/output-metadata.json",
+          "hash": "16898595507831049260"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/outputs/logs/manifest-merger-debug-report.txt",
+          "hash": "5082945931156166883"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin",
+          "hash": "3991326574427467270"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/hiltJavaCompileDebug/previous-compilation-data.bin",
+          "hash": "3627281169135486415"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/META-INF/app_debug.kotlin_module",
+          "hash": "12055573773637547619"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ComposableSingletons$MainActivityKt$lambda-1$1.class",
+          "hash": "11305829073607841548"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ComposableSingletons$MainActivityKt$lambda-2$1.class",
+          "hash": "4976336851253723183"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ComposableSingletons$MainActivityKt.class",
+          "hash": "11189114277856309969"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/MainActivity.class",
+          "hash": "4717083384059988636"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/MainApplication.class",
+          "hash": "4686011080649682104"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/di/AppModule.class",
+          "hash": "5497116691895328458"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/navigation/AppNavigationKt$AppNavigation$1.class",
+          "hash": "14496523060293835098"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/navigation/AppNavigationKt$AppNavigation$2.class",
+          "hash": "17149835690708009139"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/navigation/AppNavigationKt.class",
+          "hash": "2869394796517681951"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-1$1.class",
+          "hash": "7446403332895502615"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-2$1.class",
+          "hash": "11601767024014949164"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-3$1.class",
+          "hash": "14453059767970175270"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-4$1.class",
+          "hash": "856574259910628926"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt$lambda-5$1.class",
+          "hash": "306633366439136206"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/navigation/ComposableSingletons$AppNavigationKt.class",
+          "hash": "12929934053653615754"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ui/components/BottomNavBarKt$BottomNavBar$1$1$2.class",
+          "hash": "13016822078045505293"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ui/components/BottomNavBarKt$BottomNavBar$1$1$3.class",
+          "hash": "8313546168830778130"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ui/components/BottomNavBarKt$BottomNavBar$1.class",
+          "hash": "2400290182365637638"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ui/components/BottomNavBarKt.class",
+          "hash": "1936195250765325324"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ui/components/NavItem.class",
+          "hash": "7554076113444250462"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ui/screens/ChatScreenKt.class",
+          "hash": "10812645312931075663"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ui/screens/HistoryScreenKt.class",
+          "hash": "3974954854517097102"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ui/screens/HomeScreenKt.class",
+          "hash": "5741175810246358053"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ui/screens/SearchScreenKt.class",
+          "hash": "5253165702977170867"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ui/screens/SettingsScreenKt.class",
+          "hash": "17221349197491547198"
+        },
+        {
+          "file": "apps/AndroidApp/app/build/tmp/kotlin-classes/debug/com/example/androidapp/ui/theme/ThemeKt.class",
+          "hash": "15878169283122336759"
+        },
+        {
+          "file": "apps/AndroidApp/app/proguard-rules.pro",
+          "hash": "14538320554981778070"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/AndroidManifest.xml",
+          "hash": "382132936625240807"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/java/com/example/androidapp/MainActivity.kt",
+          "hash": "18194316142864257795"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/java/com/example/androidapp/MainApplication.kt",
+          "hash": "8213429257365842218"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/java/com/example/androidapp/di/AppModule.kt",
+          "hash": "14674834026141291749"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/java/com/example/androidapp/navigation/AppNavigation.kt",
+          "hash": "984396922062378088"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/java/com/example/androidapp/ui/components/BottomNavBar.kt",
+          "hash": "9923631105999792907"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/java/com/example/androidapp/ui/screens/ChatScreen.kt",
+          "hash": "16227914213404550015"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/java/com/example/androidapp/ui/screens/HistoryScreen.kt",
+          "hash": "695325088980395005"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/java/com/example/androidapp/ui/screens/HomeScreen.kt",
+          "hash": "7043412688470573703"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/java/com/example/androidapp/ui/screens/SearchScreen.kt",
+          "hash": "12155541037141376017"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/java/com/example/androidapp/ui/screens/SettingsScreen.kt",
+          "hash": "1472876124640966396"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/java/com/example/androidapp/ui/theme/Theme.kt",
+          "hash": "9369191932299444184"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/res/drawable/ic_launcher_foreground.xml",
+          "hash": "3069767738433818798"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+          "hash": "11786186518676638194"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+          "hash": "11786186518676638194"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/res/values/ic_launcher_background.xml",
+          "hash": "10237020776186831697"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/res/values/strings.xml",
+          "hash": "13319578616630598187"
+        },
+        {
+          "file": "apps/AndroidApp/app/src/main/res/values/themes.xml",
+          "hash": "1977574705701867559"
+        },
+        {
+          "file": "apps/AndroidApp/build.gradle.kts",
+          "hash": "3490392642663407555"
+        },
+        {
+          "file": "apps/AndroidApp/gradle.properties",
+          "hash": "9102293027187699890"
+        },
+        {
+          "file": "apps/AndroidApp/gradle/libs.versions.toml",
+          "hash": "16049652160700176660"
+        },
+        {
+          "file": "apps/AndroidApp/gradle/wrapper/gradle-wrapper.jar",
+          "hash": "12100301608575443450"
+        },
+        {
+          "file": "apps/AndroidApp/gradle/wrapper/gradle-wrapper.properties",
+          "hash": "9389969424153596237"
+        },
+        {
+          "file": "apps/AndroidApp/gradlew",
+          "hash": "1725157457647629260"
+        },
+        {
+          "file": "apps/AndroidApp/java_pid78271.hprof",
+          "hash": "6914556038492327242"
+        },
+        {
+          "file": "apps/AndroidApp/project.json",
+          "hash": "7799880415222011260"
+        },
+        {
+          "file": "apps/AndroidApp/settings.gradle.kts",
+          "hash": "16560680494445712829"
+        }
+      ],
+      "RnApp": [
+        {
+          "file": "apps/RnApp/.bundle/config",
+          "hash": "9116505824108018199"
+        },
+        {
+          "file": "apps/RnApp/.eslintrc.js",
+          "hash": "17354359792012622799"
+        },
+        {
+          "file": "apps/RnApp/.gitignore",
+          "hash": "5050593768160088275"
+        },
+        {
+          "file": "apps/RnApp/.prettierrc.js",
+          "hash": "5023573646155516009"
+        },
+        {
+          "file": "apps/RnApp/.watchmanconfig",
+          "hash": "15753941481085060538"
+        },
+        {
+          "file": "apps/RnApp/App.tsx",
+          "hash": "16192891092219800552",
+          "deps": [
+            "npm:@react-native/new-app-screen",
+            "npm:react-native",
+            "npm:react-native-safe-area-context"
+          ]
+        },
+        {
+          "file": "apps/RnApp/Gemfile",
+          "hash": "12884890766378124899"
+        },
+        {
+          "file": "apps/RnApp/README.md",
+          "hash": "10575641548894021443"
+        },
+        {
+          "file": "apps/RnApp/__tests__/App.test.tsx",
+          "hash": "10792233639728460309",
+          "deps": [
+            "npm:react",
+            "npm:react-test-renderer"
+          ]
+        },
+        {
+          "file": "apps/RnApp/android/app/build.gradle",
+          "hash": "3255087972977872840"
+        },
+        {
+          "file": "apps/RnApp/android/app/debug.keystore",
+          "hash": "5037686243849261810"
+        },
+        {
+          "file": "apps/RnApp/android/app/proguard-rules.pro",
+          "hash": "13814197385154279786"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/AndroidManifest.xml",
+          "hash": "9373809384997201445"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/java/com/rnapp/MainActivity.kt",
+          "hash": "13320008322369416832"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/java/com/rnapp/MainApplication.kt",
+          "hash": "13858055807881017082"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/res/drawable/rn_edit_text_material.xml",
+          "hash": "4466596183044014152"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+          "hash": "10788509195642110029"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+          "hash": "14348562046770238248"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+          "hash": "328692529308011025"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+          "hash": "11802043336826859502"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+          "hash": "13006206334539413900"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+          "hash": "1812825738055967771"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+          "hash": "6104457872863500683"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+          "hash": "2478168592410677995"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+          "hash": "12283149652938275290"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+          "hash": "7126668675123994836"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/res/values/strings.xml",
+          "hash": "17862086100590243332"
+        },
+        {
+          "file": "apps/RnApp/android/app/src/main/res/values/styles.xml",
+          "hash": "14052910750539201041"
+        },
+        {
+          "file": "apps/RnApp/android/build.gradle",
+          "hash": "14276478454806160793"
+        },
+        {
+          "file": "apps/RnApp/android/gradle.properties",
+          "hash": "9051431235718361316"
+        },
+        {
+          "file": "apps/RnApp/android/gradle/wrapper/gradle-wrapper.jar",
+          "hash": "2487768331266202992"
+        },
+        {
+          "file": "apps/RnApp/android/gradle/wrapper/gradle-wrapper.properties",
+          "hash": "1738382101862936557"
+        },
+        {
+          "file": "apps/RnApp/android/gradlew",
+          "hash": "15457068491492131041"
+        },
+        {
+          "file": "apps/RnApp/android/gradlew.bat",
+          "hash": "11696202184983665693"
+        },
+        {
+          "file": "apps/RnApp/android/settings.gradle",
+          "hash": "17811104783672863894"
+        },
+        {
+          "file": "apps/RnApp/app.json",
+          "hash": "7645075967345273268"
+        },
+        {
+          "file": "apps/RnApp/babel.config.js",
+          "hash": "17506418141289760001"
+        },
+        {
+          "file": "apps/RnApp/index.js",
+          "hash": "13485637918330743112",
+          "deps": [
+            "npm:react-native"
+          ]
+        },
+        {
+          "file": "apps/RnApp/ios/.xcode.env",
+          "hash": "2240437479405059044"
+        },
+        {
+          "file": "apps/RnApp/ios/Podfile",
+          "hash": "10412664079628673413"
+        },
+        {
+          "file": "apps/RnApp/ios/RnApp.xcodeproj/project.pbxproj",
+          "hash": "2721541560831260569"
+        },
+        {
+          "file": "apps/RnApp/ios/RnApp.xcodeproj/xcshareddata/xcschemes/RnApp.xcscheme",
+          "hash": "11171946202836254039"
+        },
+        {
+          "file": "apps/RnApp/ios/RnApp/AppDelegate.swift",
+          "hash": "16658207749268623618"
+        },
+        {
+          "file": "apps/RnApp/ios/RnApp/Images.xcassets/AppIcon.appiconset/Contents.json",
+          "hash": "13651775502586994303"
+        },
+        {
+          "file": "apps/RnApp/ios/RnApp/Images.xcassets/Contents.json",
+          "hash": "10114040536141029740"
+        },
+        {
+          "file": "apps/RnApp/ios/RnApp/Info.plist",
+          "hash": "16193826162096202014"
+        },
+        {
+          "file": "apps/RnApp/ios/RnApp/LaunchScreen.storyboard",
+          "hash": "10402877973068733578"
+        },
+        {
+          "file": "apps/RnApp/ios/RnApp/PrivacyInfo.xcprivacy",
+          "hash": "16670914145149810597"
+        },
+        {
+          "file": "apps/RnApp/jest.config.js",
+          "hash": "3450453734004767423"
+        },
+        {
+          "file": "apps/RnApp/metro.config.js",
+          "hash": "2535319034288447076",
+          "deps": [
+            "npm:@react-native/metro-config"
+          ]
+        },
+        {
+          "file": "apps/RnApp/package.json",
+          "hash": "15130207878030383895",
+          "deps": [
+            "npm:@babel/core",
+            "npm:@babel/preset-env",
+            "npm:@babel/runtime",
+            "npm:@react-native-community/cli",
+            "npm:@react-native-community/cli-platform-android",
+            "npm:@react-native-community/cli-platform-ios",
+            "npm:@react-native/babel-preset",
+            "npm:@react-native/eslint-config",
+            "npm:@react-native/metro-config",
+            "npm:@react-native/typescript-config",
+            "npm:@types/jest",
+            "npm:@types/react",
+            "npm:@types/react-test-renderer",
+            "npm:eslint",
+            "npm:jest",
+            "npm:prettier",
+            "npm:react-test-renderer",
+            "npm:typescript",
+            "npm:react",
+            "npm:react-native",
+            "npm:@react-native/new-app-screen",
+            "npm:react-native-safe-area-context"
+          ]
+        },
+        {
+          "file": "apps/RnApp/project.json",
+          "hash": "10485322953907524899"
+        },
+        {
+          "file": "apps/RnApp/tsconfig.json",
+          "hash": "11359266357810263712"
+        }
+      ]
+    }
+  },
+  "externalNodesHash": "15667728526721446717"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "AndroidApp",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/AndroidApp",
+  "targets": {
+    "build-android": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "./gradlew assembleDebug",
+        "cwd": "apps/AndroidApp"
+      }
+    },
+    "run-android": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "./gradlew installDebug && adb shell am start -n com.example.androidapp/.MainActivity",
+        "cwd": "apps/AndroidApp"
+      }
+    },
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "./gradlew clean",
+        "cwd": "apps/AndroidApp"
+      }
+    }
+  }
+}

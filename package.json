@@ -1,0 +1,20 @@
+{
+  "name": "@monorepo/root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "start:rn": "nx start RnApp",
+    "build:android": "nx build-android AndroidApp",
+    "run:android": "nx run-android AndroidApp"
+  },
+  "devDependencies": {
+    "nx": "^21.0.0",
+    "@nx/workspace": "^21.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

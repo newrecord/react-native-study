@@ -1,0 +1,1 @@
+# Add any directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
