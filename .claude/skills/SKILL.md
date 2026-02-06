@@ -1,4 +1,5 @@
 ---
+name: rn-cmd
 description: Nx 모노레포 빌드 및 실행 명령어
 ---
 
