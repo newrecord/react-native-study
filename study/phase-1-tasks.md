@@ -405,7 +405,7 @@ assembleRelease
 
 ---
 
-## Task 6-1: Native ↔ RN 공유 저장소(SharedPreferences) 연동
+## Task 6-1: Native ↔ RN 공유 저장소(SharedPreferences) 연동 [완료]
 
 ### 목표
 네이티브(홈)와 RN(설정) 화면에서 동일한 SharedPreferences를 읽고 쓰는 기능을 구현하여, 브라운필드 앱에서 네이티브와 RN 간 영속 데이터를 공유하는 패턴을 검증한다.
@@ -413,29 +413,52 @@ assembleRelease
 ### 배경
 실제 엔터프라이즈 앱에서는 네이티브와 RN이 동일한 사용자 설정, 토큰, 캐시 등을 공유해야 한다. SharedPreferences는 가장 기본적인 Android 영속 저장소로, 양쪽에서 자유롭게 접근 가능해야 한다.
 
-### 작업 항목
+### 실제 적용된 변경
 
-- [ ] **홈 화면(Compose) — 입력/출력 UI 추가**
-  - TextField + "저장" 버튼 → SharedPreferences에 텍스트 저장
-  - Text 출력 영역 + "불러오기" 버튼 → SharedPreferences에서 텍스트 읽기
-- [ ] **AppBridgeModule — SharedPreferences 접근 메서드 추가**
-  - `@ReactMethod saveText(key: String, value: String)` → SharedPreferences에 저장
-  - `@ReactMethod loadText(key: String, promise: Promise)` → SharedPreferences에서 읽기 (Promise 반환)
-- [ ] **설정 화면(RN) — 입력/출력 UI 추가 (하단)**
-  - TextInput + "저장" 버튼 → NativeModules.AppBridge.saveText() 호출
-  - Text 출력 영역 + "불러오기" 버튼 → NativeModules.AppBridge.loadText() 호출
-- [ ] **크로스 화면 저장/불러오기 검증**
+- [x] **홈 화면(Compose) — 입력/출력 UI 추가**
+  - `HomeScreen.kt`: Column + verticalScroll 레이아웃으로 전환
+  - OutlinedTextField + "저장" 버튼 → `SharedPreferences.edit().putString().apply()`
+  - Card + "불러오기" 버튼 → `SharedPreferences.getString()`
+  - `AppBridgeModule.PREFS_NAME` 상수를 공유하여 동일한 파일명 사용
+- [x] **AppBridgeModule — SharedPreferences 접근 메서드 추가**
+  - `@ReactMethod saveText(key, value)` → `reactApplicationContext.getSharedPreferences().edit().putString().apply()`
+  - `@ReactMethod loadText(key, promise)` → `promise.resolve(prefs.getString(key, null))`
+  - `PREFS_NAME = "app_bridge_prefs"` 상수를 companion object에 정의 (네이티브 측에서도 참조)
+- [x] **설정 화면(RN) — SharedStorageSection 컴포넌트 추가 (하단)**
+  - TextInput + "저장" 버튼 → `AppBridge.saveText(STORAGE_KEY, inputText)`
+  - Text 출력 카드 + "불러오기" 버튼 → `await AppBridge.loadText(STORAGE_KEY)`
+  - 저장 키: `shared_text` (네이티브/RN 동일)
+- [x] **크로스 화면 저장/불러오기 검증**
   - 홈에서 저장 → 설정에서 불러오기 성공
   - 설정에서 저장 → 홈에서 불러오기 성공
 
-### 학습 포인트
-- 브라운필드 앱에서 네이티브와 RN이 동일한 영속 저장소를 공유하는 패턴
-- NativeModule을 통한 Android 시스템 API(SharedPreferences) 접근
-- Compose 화면과 RN 화면 간 데이터 일관성 유지 방법
+### 해결한 이슈
 
-### 완료 기준
-- 홈(Compose) ↔ 설정(RN) 간 텍스트 저장/불러오기 정상 동작
-- 앱 종료 후 재시작해도 저장된 데이터 유지
+#### Debug 빌드에서 Metro 서버 연결 실패
+- **증상**: QA 빌드(JS 번들 내장) 테스트 후 Debug 빌드로 전환 시 RN 화면 미노출
+- **원인**: 디바이스의 adb reverse 포트 포워딩이 해제된 상태
+- **해결**: `adb reverse tcp:8081 tcp:8081` 실행 후 앱 재시작
+
+### 학습 포인트
+
+#### 네이티브와 RN의 SharedPreferences 공유 패턴
+```
+Compose (HomeScreen.kt)
+  context.getSharedPreferences("app_bridge_prefs", MODE_PRIVATE)
+    .edit().putString("shared_text", value).apply()
+
+RN (SettingsScreen.tsx)
+  NativeModules.AppBridge.saveText("shared_text", value)
+    → AppBridgeModule.saveText()
+      → reactApplicationContext.getSharedPreferences("app_bridge_prefs", MODE_PRIVATE)
+          .edit().putString("shared_text", value).apply()
+```
+- 동일한 `PREFS_NAME`과 `key`를 사용하면 네이티브와 RN이 같은 데이터를 읽고 쓸 수 있다
+- RN은 NativeModule을 경유해야 하지만, 네이티브는 직접 접근 가능
+
+### 완료 기준 [달성]
+- [x] 홈(Compose) ↔ 설정(RN) 간 텍스트 저장/불러오기 정상 동작
+- [x] 앱 종료 후 재시작해도 저장된 데이터 유지 (SharedPreferences 영속성)
 
 ---
 
