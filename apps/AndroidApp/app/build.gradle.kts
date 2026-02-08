@@ -44,13 +44,22 @@ android {
         }
     }
 
+    signingConfigs {
+        getByName("debug") {
+            // 기본 debug keystore 사용
+        }
+    }
+
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            // 학습용: debug keystore로 Release 서명 (프로덕션에서는 별도 keystore 사용)
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 

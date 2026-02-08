@@ -279,7 +279,7 @@ RN (JS Thread)
 
 ---
 
-## Task 6: Release 빌드 및 번들링
+## Task 6: Release 빌드 및 번들링 [완료]
 
 ### 목표
 Dev 환경(Metro 서버)이 아닌 Release 환경에서 JS 번들이 APK에 포함되어 독립 실행되도록 빌드 파이프라인을 구성한다.
@@ -287,36 +287,121 @@ Dev 환경(Metro 서버)이 아닌 Release 환경에서 JS 번들이 APK에 포�
 ### 배경
 프로덕션에서는 Metro 서버가 없으므로, JS 번들을 사전에 컴파일하여 APK의 `assets/`에 포함해야 한다. Hermes를 사용하면 바이트코드(.hbc)로 사전 컴파일되어 런타임 파싱 시간이 대폭 감소한다.
 
-### 작업 항목
+### 실제 적용된 변경
 
-- [ ] **Release 빌드 시 JS 번들 자동 생성 확인**
-  - Gradle의 `bundleReleaseJsAndAssets` 태스크가 정상 동작하는지 확인
-  - `react {}` 블록의 `entryFile`이 올바른 경로(`../RnApp/index.js`)를 가리키는지 확인
-  - 생성된 번들 위치: `app/build/generated/assets/createBundleReleaseJsAndAssets/index.android.bundle`
-- [ ] **Hermes 바이트코드 컴파일 확인**
-  - Release 빌드에서 `.bundle`이 아닌 Hermes 바이트코드(`.hbc`)로 변환되는지 확인
-  - 번들 파일을 hexdump로 검사하여 Hermes 매직 넘버 확인
-- [ ] **Release APK 검증**
-  - `./gradlew assembleRelease` 실행
-  - APK 내 `assets/index.android.bundle` 포함 여부 확인
-  - APK 크기 측정 (RN 추가 전 baseline과 비교)
-- [ ] **ProGuard/R8 규칙 추가**
+- [x] **Release 빌드 시 JS 번들 자동 생성 확인**
+  - `createBundleReleaseJsAndAssets` 태스크 정상 동작 확인
+  - `react {}` 블록의 `root = file("../../RnApp")`으로 모노레포 경로 설정 (entryFile은 자동 해석)
+  - 생성된 번들: `app/build/intermediates/assets/release/mergeReleaseAssets/index.android.bundle` (857KB)
+- [x] **Hermes 바이트코드 컴파일 확인**
+  - hexdump 매직 넘버 `c61fbc03` — Hermes 바이트코드 포맷 확인 (JS 텍스트가 아닌 바이너리)
+  - 모노레포에서 hermesc 자동 해석 실패 → `hermesCommand` 명시적 경로 설정으로 해결
+- [x] **Release APK 검증**
+  - `./gradlew assembleRelease` 성공 (R8 minify + resource shrink)
+  - APK 내 `assets/index.android.bundle` (877,516 bytes) 포함 확인
+- [x] **ProGuard/R8 규칙 추가**
   - `proguard-rules.pro`에 RN 관련 keep 규칙 추가
-  - `com.facebook.react.**`, `com.facebook.hermes.**`, `com.facebook.jni.**` 유지
-  - Release 빌드 후 난독화된 상태에서 RN 화면 정상 동작 확인
-- [ ] **Release 빌드 실행 테스트**
+  - `com.facebook.react.**`, `com.facebook.hermes.**`, `com.facebook.jni.**`, `com.facebook.soloader.**` 유지
+  - `ReactContextBaseJavaModule`의 `@ReactMethod` 리플렉션 보호 규칙 추가
+  - R8 난독화 후에도 RN 화면 정상 동작 확인
+- [x] **Release 빌드 실행 테스트**
   - Metro 서버 없이 Release APK 설치 후 설정 탭의 RN 화면 정상 렌더링 확인
+  - Task 5의 양방향 통신(Toast, Navigation, 이벤트) 모두 정상 동작
+- [x] **QA 배포 체계 구축**
+  - `debuggableVariants` + `-PbundleInDebug` 플래그로 Debug APK에도 JS 번들 내장
+  - Nx 명령어: `build-android-qa`, `build-android-release`, `deploy-qa` 추가
+
+### APK 크기 비교
+
+| 빌드 타입 | APK 크기 | JS 번들 | Metro 필요 | R8 난독화 | 용도 |
+|-----------|---------|---------|-----------|----------|------|
+| Debug | 76.01 MB | 미포함 | O | X | 로컬 개발 |
+| QA Debug | 76.85 MB | 내장 (877KB) | X | X | QA Debug 배포 |
+| Release | 12.06 MB | 내장 (Hermes bytecode) | X | O | QA Release / 출시 |
+
+- **Debug → QA Debug 차이**: +0.84 MB (JS 번들 크기만큼 증가)
+- **Debug → Release 차이**: -63.95 MB (R8 + 리소스 축소 + debug 심볼 제거)
+
+### 해결한 핵심 이슈
+
+#### 1. 모노레포에서 hermesc 경로 자동 해석 실패
+- **증상**: `Couldn't determine Hermesc location. Please set react.hermesCommand`
+- **원인**: RN Gradle Plugin이 `%OS-BIN%` 플레이스홀더를 모노레포 구조에서 해석 실패
+- **해결**: `react {}` 블록에서 OS 감지 후 명시적 경로 설정
+  ```kotlin
+  val osDir = if (System.getProperty("os.name").lowercase().contains("mac")) "osx-bin" else "linux64-bin"
+  hermesCommand.set(file("../../../node_modules/react-native/sdks/hermesc/$osDir/hermesc").absolutePath)
+  ```
+
+#### 2. QA Debug 배포 시 Metro 서버 의존성
+- **배경**: 사내 QA 배포 시 Debug/Release 두 바이너리를 모두 전달. Debug APK는 Metro 서버 없이 동작 불가
+- **해결**: RN Gradle Plugin의 `debuggableVariants` 프로퍼티 활용
+  ```kotlin
+  // -PbundleInDebug 전달 시 debug variant도 JS 번들 내장
+  if (project.hasProperty("bundleInDebug")) {
+      debuggableVariants.set(emptyList())
+  }
+  ```
+- **Nx 명령어**: `npx nx build-android-qa AndroidApp` / `npx nx deploy-qa AndroidApp`
 
 ### 학습 포인트
-- Metro 번들러의 역할: JS 모듈 해석 → 트리 쉐이킹 → 단일 번들 생성
-- Hermes 바이트코드 사전 컴파일과 런타임 성능 이점 (파싱 시간 70~80% 감소)
-- RN Gradle Plugin이 Release 빌드 시 자동 수행하는 태스크 체인
-- ProGuard/R8이 RN 네이티브 코드에 미치는 영향과 keep 규칙의 필요성
 
-### 완료 기준
-- `./gradlew assembleRelease` 성공
-- Release APK에서 Metro 서버 없이 RN 화면 정상 렌더링
-- APK 크기 증가분 측정 및 기록
+#### RN Gradle Plugin의 빌드 태스크 체인 (Release)
+```
+assembleRelease
+  ├─ createBundleReleaseJsAndAssets (BundleHermesCTask)
+  │   ├─ Metro CLI로 JS 번들 생성 (react-native bundle)
+  │   ├─ hermesc로 Hermes 바이트코드 컴파일 (.js → .hbc)
+  │   └─ 소스맵 생성 (.map)
+  ├─ mergeReleaseAssets (번들을 assets/에 배치)
+  ├─ minifyReleaseWithR8 (코드 난독화 + 트리 쉐이킹)
+  ├─ convertShrunkResourcesToBinaryRelease (리소스 축소)
+  └─ packageRelease (최종 APK 패키징)
+```
+
+#### `debuggableVariants` 제어 메커니즘
+- 기본값: `listOf("debug")` — debug variant는 JS 번들을 생성하지 않음 (Metro 서버 사용)
+- `emptyList()` 설정 시 — 모든 variant가 JS 번들 내장 (debug 포함)
+- `BundleHermesCTask`는 `debuggableVariants`에 포함되지 않은 variant에만 등록됨
+
+#### ProGuard/R8 필수 keep 규칙
+| 규칙 | 이유 |
+|------|------|
+| `com.facebook.react.**` | RN 코어 — JS Bridge, Fabric, TurboModule 런타임 |
+| `com.facebook.hermes.**` | Hermes 엔진 — JNI로 호출되므로 난독화 시 크래시 |
+| `com.facebook.jni.**` | JNI 바인딩 — 네이티브 라이브러리 로딩 |
+| `com.facebook.soloader.**` | SoLoader — .so 파일 동적 로딩 |
+| `@ReactMethod <methods>` | 리플렉션으로 호출 — 난독화 시 메서드명 변경되면 Bridge 호출 실패 |
+
+#### Hermes 바이트코드의 이점
+- JS 텍스트 파싱 불필요 → 앱 시작 시간 **70~80% 단축**
+- 바이트코드는 JS 소스보다 약간 큰 경우도 있지만, Hermes VM에 최적화된 포맷
+- Release 빌드에서 자동 적용 (`hermesEnabled=true` + `BundleHermesCTask`)
+
+#### 빌드 타입별 배포 전략
+```
+┌──────────────┬────────────┬──────────┬───────────────┐
+│ 빌드 타입     │ JS 번들     │ 로그/디버깅 │ 용도           │
+├──────────────┼────────────┼──────────┼───────────────┤
+│ debug        │ Metro 서버  │ O        │ 개발자 로컬     │
+│ QA debug     │ APK 내장    │ O        │ QA Debug 배포  │
+│ release      │ APK 내장    │ X        │ QA Release/출시 │
+└──────────────┴────────────┴──────────┴───────────────┘
+```
+
+### Nx 빌드 명령어 정리
+
+| 명령어 | 용도 |
+|--------|------|
+| `npx nx build-android AndroidApp` | 개발용 Debug 빌드 |
+| `npx nx build-android-qa AndroidApp` | QA Debug 빌드 (JS 번들 내장) |
+| `npx nx build-android-release AndroidApp` | Release 빌드 |
+| `npx nx deploy-qa AndroidApp` | QA 일괄 실행 (클린→빌드→설치→실행) |
+
+### 완료 기준 [달성]
+- [x] `./gradlew assembleRelease` 성공 (R8 minify + resource shrink)
+- [x] Release APK에서 Metro 서버 없이 RN 화면 정상 렌더링
+- [x] APK 크기: Debug 76.01MB → Release 12.06MB (QA Debug 76.85MB)
 
 ---
 
