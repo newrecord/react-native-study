@@ -405,6 +405,69 @@ assembleRelease
 
 ---
 
+## Task 6-1: Native ↔ RN 공유 저장소(SharedPreferences) 연동
+
+### 목표
+네이티브(홈)와 RN(설정) 화면에서 동일한 SharedPreferences를 읽고 쓰는 기능을 구현하여, 브라운필드 앱에서 네이티브와 RN 간 영속 데이터를 공유하는 패턴을 검증한다.
+
+### 배경
+실제 엔터프라이즈 앱에서는 네이티브와 RN이 동일한 사용자 설정, 토큰, 캐시 등을 공유해야 한다. SharedPreferences는 가장 기본적인 Android 영속 저장소로, 양쪽에서 자유롭게 접근 가능해야 한다.
+
+### 작업 항목
+
+- [ ] **홈 화면(Compose) — 입력/출력 UI 추가**
+  - TextField + "저장" 버튼 → SharedPreferences에 텍스트 저장
+  - Text 출력 영역 + "불러오기" 버튼 → SharedPreferences에서 텍스트 읽기
+- [ ] **AppBridgeModule — SharedPreferences 접근 메서드 추가**
+  - `@ReactMethod saveText(key: String, value: String)` → SharedPreferences에 저장
+  - `@ReactMethod loadText(key: String, promise: Promise)` → SharedPreferences에서 읽기 (Promise 반환)
+- [ ] **설정 화면(RN) — 입력/출력 UI 추가 (하단)**
+  - TextInput + "저장" 버튼 → NativeModules.AppBridge.saveText() 호출
+  - Text 출력 영역 + "불러오기" 버튼 → NativeModules.AppBridge.loadText() 호출
+- [ ] **크로스 화면 저장/불러오기 검증**
+  - 홈에서 저장 → 설정에서 불러오기 성공
+  - 설정에서 저장 → 홈에서 불러오기 성공
+
+### 학습 포인트
+- 브라운필드 앱에서 네이티브와 RN이 동일한 영속 저장소를 공유하는 패턴
+- NativeModule을 통한 Android 시스템 API(SharedPreferences) 접근
+- Compose 화면과 RN 화면 간 데이터 일관성 유지 방법
+
+### 완료 기준
+- 홈(Compose) ↔ 설정(RN) 간 텍스트 저장/불러오기 정상 동작
+- 앱 종료 후 재시작해도 저장된 데이터 유지
+
+---
+
+## Task 6-2: RN Surface 탭 전환 시 UI 상태 유지
+
+### 목표
+설정 → 홈 → 설정으로 탭을 전환했을 때, RN 화면의 스크롤 위치와 입력 상태가 유지되도록 Surface 생명주기를 개선한다.
+
+### 배경
+Task 6-1에서 설정 화면 하단에 입력/출력 폼을 추가하면, 스크롤하여 폼을 확인한 상태에서 홈 탭으로 전환 후 다시 설정 탭으로 돌아오면 RN Surface가 재생성되어 스크롤 위치와 입력값이 초기화되는 문제가 발생할 것으로 예상된다.
+
+### 작업 항목
+
+- [ ] **현상 확인**: 설정 → 홈 → 설정 전환 시 RN UI 초기화 여부 확인
+- [ ] **원인 분석**: Compose Navigation의 `saveState`/`restoreState`와 ReactSurface 생명주기 간 상호작용 분석
+- [ ] **해결 방안 구현** (예상되는 접근법)
+  - ReactSurface를 탭 전환 시 destroy하지 않고 유지 (Composable 생명주기 관리)
+  - 또는 RN 측 상태 관리(useState/useRef)로 복원
+  - 또는 Compose의 `remember` + Surface 캐싱 전략
+- [ ] **검증**: 설정 → 홈 → 설정 전환 후 스크롤 위치, 입력값, 출력값 유지 확인
+
+### 학습 포인트
+- Compose Navigation의 백스택 관리와 ReactSurface 생명주기의 불일치
+- RN Surface를 persist하기 위한 전략 (Surface 캐싱, View detach/reattach 등)
+- 브라운필드 앱에서 RN 화면 상태 유지의 실무적 해결 패턴
+
+### 완료 기준
+- 설정 → 홈 → 설정 전환 후 스크롤 위치 유지
+- 입력 폼의 텍스트와 출력 폼의 결과가 초기화되지 않음
+
+---
+
 ## Task 7: 멀티 Surface 확장 및 안정화
 
 ### 목표

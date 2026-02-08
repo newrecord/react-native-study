@@ -6,6 +6,7 @@ import {
   ScrollView,
   StyleSheet,
   Text,
+  TextInput,
   View,
 } from 'react-native';
 
@@ -109,6 +110,9 @@ function SettingsScreen(props: SettingsProps) {
           </Text>
         )}
       </View>
+
+      {/* SharedPreferences 공유 저장소 */}
+      <SharedStorageSection />
     </ScrollView>
   );
 }
@@ -118,6 +122,43 @@ function InfoRow({label, value}: {label: string; value: string}) {
     <View style={styles.infoRow}>
       <Text style={styles.infoLabel}>{label}</Text>
       <Text style={styles.infoValue}>{value}</Text>
+    </View>
+  );
+}
+
+const STORAGE_KEY = 'shared_text';
+
+function SharedStorageSection() {
+  const [inputText, setInputText] = useState('');
+  const [loadedText, setLoadedText] = useState<string | null>(null);
+
+  const handleSave = () => {
+    AppBridge.saveText(STORAGE_KEY, inputText);
+    AppBridge.showToast('저장 완료');
+  };
+
+  const handleLoad = async () => {
+    const value = await AppBridge.loadText(STORAGE_KEY);
+    setLoadedText(value);
+  };
+
+  return (
+    <View style={styles.section}>
+      <Text style={styles.sectionTitle}>SharedPreferences 공유 저장소</Text>
+      <TextInput
+        style={styles.textInput}
+        value={inputText}
+        onChangeText={setInputText}
+        placeholder="텍스트 입력"
+        placeholderTextColor="#aaa"
+      />
+      <Button label="저장" onPress={handleSave} />
+      <Button label="불러오기" onPress={handleLoad} />
+      <View style={styles.card}>
+        <Text style={styles.loadedText}>
+          {loadedText ?? '(저장된 값 없음)'}
+        </Text>
+      </View>
     </View>
   );
 }
@@ -210,6 +251,22 @@ const styles = StyleSheet.create({
     color: '#aaa',
     textAlign: 'center',
     marginTop: 8,
+  },
+  textInput: {
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    fontSize: 15,
+    color: '#333',
+    marginBottom: 8,
+  },
+  loadedText: {
+    fontSize: 15,
+    color: '#333',
+    textAlign: 'center',
   },
 });
 

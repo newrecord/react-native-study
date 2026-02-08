@@ -1,5 +1,6 @@
 package com.example.androidapp.bridge
 
+import android.content.Context
 import android.widget.Toast
 import com.example.androidapp.BuildConfig
 import com.facebook.react.bridge.Arguments
@@ -82,6 +83,29 @@ class AppBridgeModule(reactContext: ReactApplicationContext) :
             .emit(eventName, params)
     }
 
+    /**
+     * RN → Native: SharedPreferences에 텍스트 저장
+     */
+    @ReactMethod
+    fun saveText(key: String, value: String) {
+        reactApplicationContext
+            .getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+            .edit()
+            .putString(key, value)
+            .apply()
+    }
+
+    /**
+     * RN → Native: SharedPreferences에서 텍스트 읽기 (Promise 반환)
+     */
+    @ReactMethod
+    fun loadText(key: String, promise: Promise) {
+        val value = reactApplicationContext
+            .getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+            .getString(key, null)
+        promise.resolve(value)
+    }
+
     // RN의 NativeEventEmitter 구독/해제 시 경고 방지용
     @ReactMethod
     fun addListener(eventName: String) {}
@@ -91,6 +115,7 @@ class AppBridgeModule(reactContext: ReactApplicationContext) :
 
     companion object {
         const val MODULE_NAME = "AppBridge"
+        const val PREFS_NAME = "app_bridge_prefs"
 
         private val _navigationEvents = MutableSharedFlow<String>(extraBufferCapacity = 1)
         val navigationEvents = _navigationEvents.asSharedFlow()
