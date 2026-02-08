@@ -9,10 +9,22 @@ description: Nx 모노레포 빌드 및 실행 명령어
 
 ## Android 앱 (AndroidApp)
 
-### 빌드
+### 빌드 (개발용, Metro 서버 필요)
 
 ```bash
 npx nx build-android AndroidApp
+```
+
+### 빌드 (QA 배포용, JS 번들 내장, Metro 서버 불필요)
+
+```bash
+npx nx build-android-qa AndroidApp
+```
+
+### 빌드 (Release)
+
+```bash
+npx nx build-android-release AndroidApp
 ```
 
 ### 실행 (에뮬레이터/디바이스 필요)

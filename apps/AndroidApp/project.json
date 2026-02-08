@@ -11,6 +11,20 @@
         "cwd": "apps/AndroidApp"
       }
     },
+    "build-android-qa": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "./gradlew assembleDebug -PbundleInDebug=true",
+        "cwd": "apps/AndroidApp"
+      }
+    },
+    "build-android-release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "./gradlew assembleRelease",
+        "cwd": "apps/AndroidApp"
+      }
+    },
     "run-android": {
       "executor": "nx:run-commands",
       "options": {

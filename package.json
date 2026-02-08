@@ -8,6 +8,8 @@
   "scripts": {
     "start:rn": "nx start RnApp",
     "build:android": "nx build-android AndroidApp",
+    "build:android:qa": "nx build-android-qa AndroidApp",
+    "build:android:release": "nx build-android-release AndroidApp",
     "run:android": "nx run-android AndroidApp"
   },
   "devDependencies": {

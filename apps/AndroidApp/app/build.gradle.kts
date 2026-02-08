@@ -13,6 +13,16 @@ react {
     reactNativeDir = file("../../../node_modules/react-native")
     codegenDir = file("../../../node_modules/@react-native/codegen")
     cliFile = file("../../../node_modules/@react-native-community/cli/build/bin.js")
+
+    // 모노레포에서 Hermes 컴파일러 경로를 자동 해석하지 못하므로 명시적으로 지정
+    val osDir = if (System.getProperty("os.name").lowercase().contains("mac")) "osx-bin" else "linux64-bin"
+    hermesCommand.set(file("../../../node_modules/react-native/sdks/hermesc/$osDir/hermesc").absolutePath)
+
+    // debuggableVariants에 포함된 variant는 JS 번들을 APK에 내장하지 않음 (Metro 서버 사용)
+    // -PbundleInDebug 전달 시 debug를 제외하여 JS 번들을 APK에 내장 (QA 배포용)
+    if (project.hasProperty("bundleInDebug")) {
+        debuggableVariants.set(emptyList())
+    }
 }
 
 android {
