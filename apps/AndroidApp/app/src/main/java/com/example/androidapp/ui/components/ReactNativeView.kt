@@ -1,6 +1,7 @@
 package com.example.androidapp.ui.components
 
 import android.app.Activity
+import android.os.Bundle
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.remember
@@ -23,18 +24,20 @@ import com.facebook.react.ReactHost
  * @param reactHost Hilt로 주입받은 ReactHost 싱글톤
  * @param moduleName RN 측 AppRegistry.registerComponent()에 등록된 모듈 이름
  * @param modifier Compose Modifier
+ * @param initialProperties 네이티브에서 RN으로 전달할 초기 데이터 (Bundle)
  */
 @Composable
 fun ReactNativeView(
     reactHost: ReactHost,
     moduleName: String,
     modifier: Modifier = Modifier,
+    initialProperties: Bundle? = null,
 ) {
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
 
     val surface = remember(moduleName) {
-        reactHost.createSurface(context, moduleName, null)
+        reactHost.createSurface(context, moduleName, initialProperties)
     }
 
     DisposableEffect(lifecycleOwner, surface) {

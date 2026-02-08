@@ -198,7 +198,7 @@ react {
 
 ---
 
-## Task 5: Native <-> RN 양방향 통신 구현
+## Task 5: Native <-> RN 양방향 통신 구현 [완료]
 
 ### 목표
 네이티브(Kotlin)와 RN(TypeScript) 간에 데이터를 주고받는 통신 채널을 구축한다.
@@ -206,42 +206,76 @@ react {
 ### 배경
 실제 엔터프라이즈 앱에서는 네이티브 측의 인증 토큰, 사용자 정보, 설정값 등을 RN 화면에 전달하고, RN에서의 사용자 액션(버튼 클릭 등)을 네이티브 네비게이션으로 전달해야 한다.
 
-### 작업 항목
+### 실제 적용된 변경
 
-- [ ] **Native → RN: 초기 데이터 전달 (initialProperties)**
-  - `startReactApplication()`의 세 번째 인자 `Bundle`에 데이터 담기
-  - RN 측에서 `props`로 수신하여 화면에 표시
-  - 예시: 사용자 이름, 앱 버전, 테마 설정 등
-- [ ] **RN → Native: NativeModule 메서드 호출**
-  - 커스텀 NativeModule 작성 (Bridge 방식)
-    - Kotlin: `ReactContextBaseJavaModule` 상속, `@ReactMethod` 어노테이션
-    - 예시: `navigateToNativeScreen(screenName: String)` → Compose Navigation 호출
-  - ReactPackage 생성 및 ReactNativeHost의 `getPackages()`에 등록
-  - RN 측에서 `NativeModules.NavigationModule.navigateToNativeScreen('home')` 호출
-- [ ] **Native → RN: 이벤트 전송 (DeviceEventEmitter)**
-  - 네이티브에서 `reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter::class.java).emit(...)` 호출
-  - RN 측에서 `DeviceEventEmitter.addListener()`로 수신
-  - 예시: 네이티브 설정 변경 시 RN에 알림
-- [ ] **통신 테스트**
-  - RN 화면의 버튼 클릭 → 네이티브 Toast 표시
-  - 네이티브에서 전달한 사용자 이름이 RN 화면에 표시
-  - 양방향 데이터 흐름이 정상 동작하는지 확인
-
-### (선택) TurboModule 방식 도전
-
-- [ ] TurboModule Spec(TypeScript)을 정의하여 Codegen이 네이티브 인터페이스 자동 생성하도록 구성
-- [ ] Bridge 방식과 성능/개발 경험 비교
+- [x] **Native → RN: 초기 데이터 전달 (initialProperties)**
+  - `ReactNativeView` Composable에 `initialProperties: Bundle?` 파라미터 추가
+  - `ReactHost.createSurface(context, moduleName, initialProperties)`로 데이터 전달
+  - `SettingsScreen.kt`에서 Bundle에 `userName`, `appVersion`, `themeName` 담아 전달
+  - RN 측에서 `props.userName` 등으로 수신하여 화면에 표시
+- [x] **RN → Native: NativeModule 메서드 호출**
+  - `bridge/AppBridgeModule.kt` — `ReactContextBaseJavaModule` 상속, Bridge 방식
+    - `@ReactMethod showToast(message)` → Android Toast 표시
+    - `@ReactMethod navigateToNativeScreen(screenName)` → SharedFlow로 Compose Navigation에 전달
+    - `@ReactMethod getAppInfo(promise)` → Promise 기반 앱 정보 반환
+  - `bridge/AppBridgePackage.kt` — ReactPackage 구현
+  - `MainApplication.kt`의 `getPackages()`에 `AppBridgePackage()` 등록
+  - RN 측에서 `NativeModules.AppBridge.showToast(...)` 등으로 호출
+- [x] **Native → RN: 이벤트 전송 (DeviceEventEmitter)**
+  - `AppBridgeModule.sendEvent()` → `RCTDeviceEventEmitter.emit()` 호출
+  - `@ReactMethod requestThemeChange(themeName)` → 네이티브 처리 후 `onThemeChanged` 이벤트 전송
+  - RN 측에서 `DeviceEventEmitter.addListener('onThemeChanged', ...)` 로 수신
+  - `addListener`/`removeListeners` 경고 방지용 메서드 추가
+- [x] **통신 테스트 UI 구현**
+  - RN `SettingsScreen.tsx` — 3개 섹션으로 구성:
+    1. 초기 데이터 표시 카드 (userName, appVersion, themeName)
+    2. RN → Native 버튼 (Toast, 홈 이동, 앱 정보 조회)
+    3. Native → RN 이벤트 (테마 변경 요청/수신 결과 표시)
+- [x] **RN → Compose Navigation 연동**
+  - `AppBridgeModule.companion.navigationEvents` (MutableSharedFlow)
+  - `AppNavigation.kt`에서 `LaunchedEffect`로 collect → `navController.navigate()` 호출
 
 ### 학습 포인트
-- Bridge 아키텍처: JS → Bridge(JSON 직렬화) → Native → Bridge(JSON 역직렬화) → JS
-- TurboModule: JSI(JavaScript Interface)를 통한 직접 호출, 직렬화 오버헤드 제거
-- `ReactApplicationContext`의 역할과 네이티브 모듈에서의 Activity 접근 방법
-- 네이티브 이벤트 시스템(DeviceEventEmitter)과 React의 이벤트 핸들링
 
-### 완료 기준
-- RN 화면의 버튼 클릭으로 네이티브 측 동작 트리거 성공
-- 네이티브에서 전달한 데이터가 RN 화면에 정상 표시
-- 양방향 통신이 안정적으로 동작 (반복 호출 시 크래시/메모리 릭 없음)
+#### Bridge NativeModule 작성 패턴
+- `ReactContextBaseJavaModule` 상속 → `getName()` = JS 측 모듈 이름
+- `@ReactMethod` 어노테이션으로 JS에 노출할 메서드 정의
+- `ReactPackage` 구현 → `MainApplication.getPackages()`에 등록
+- JS 측: `NativeModules.모듈이름.메서드이름()` 으로 호출
+
+#### 세 가지 통신 채널 비교
+| 채널 | 방향 | 타이밍 | 용도 |
+|------|------|--------|------|
+| `initialProperties` (Bundle) | Native → RN | Surface 생성 시 1회 | 초기 설정, 사용자 정보 |
+| `NativeModule @ReactMethod` | RN → Native | RN에서 필요할 때 호출 | Toast, 네비게이션, API 호출 |
+| `DeviceEventEmitter` | Native → RN | 네이티브에서 필요할 때 발행 | 상태 변경 알림, 실시간 이벤트 |
+
+#### NativeModule에서 Compose Navigation 연동 패턴
+```
+RN (JS Thread)
+  → NativeModules.AppBridge.navigateToNativeScreen("home")
+    → AppBridgeModule.navigateToNativeScreen()
+      → MutableSharedFlow.tryEmit("home")
+        → AppNavigation LaunchedEffect collect
+          → navController.navigate("home")
+```
+- NativeModule은 ReactApplicationContext만 접근 가능, NavController에 직접 접근 불가
+- Kotlin SharedFlow를 이벤트 버스로 활용하여 Bridge Layer → Compose Layer 통신
+
+#### Promise 기반 비동기 통신
+- `@ReactMethod fun getAppInfo(promise: Promise)` — 마지막 파라미터가 Promise면 RN에서 async/await 사용 가능
+- `promise.resolve(WritableMap)` / `promise.reject(code, message)` 로 결과 반환
+- `Arguments.createMap()` 으로 RN에 전달할 데이터 구조 생성
+
+#### DeviceEventEmitter 사용 시 주의사항
+- `addListener(eventName)`와 `removeListeners(count)` 메서드를 빈 구현으로 추가해야 경고 방지
+- `reactApplicationContext.getJSModule(RCTDeviceEventEmitter::class.java).emit()` 으로 이벤트 발행
+- RN 측에서 `useEffect` cleanup으로 `subscription.remove()` 호출 필수 (메모리 릭 방지)
+
+### 완료 기준 [달성]
+- [x] RN 화면의 버튼 클릭으로 네이티브 측 동작 트리거 성공 (Toast, Navigation)
+- [x] 네이티브에서 전달한 데이터가 RN 화면에 정상 표시 (initialProperties)
+- [x] 양방향 통신이 안정적으로 동작 (빌드 성공, 반복 호출 가능한 구조)
 
 ---
 

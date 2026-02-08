@@ -1,6 +1,7 @@
 package com.example.androidapp
 
 import android.app.Application
+import com.example.androidapp.bridge.AppBridgePackage
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactHost
@@ -28,7 +29,9 @@ class MainApplication : Application(), ReactApplication {
     override val reactNativeHost: ReactNativeHost =
         object : DefaultReactNativeHost(this) {
             override fun getPackages(): List<ReactPackage> =
-                PackageList(this).packages
+                PackageList(this).packages.apply {
+                    add(AppBridgePackage())
+                }
 
             override fun getJSMainModuleName(): String = "index"
 
