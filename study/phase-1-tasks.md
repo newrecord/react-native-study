@@ -42,7 +42,7 @@ AndroidApp의 빌드 도구 버전을 RN 통합이 가능한 수준으로 업데
 
 ---
 
-## Task 2: AndroidApp Gradle에 React Native 의존성 추가
+## Task 2: AndroidApp Gradle에 React Native 의존성 추가 [완료]
 
 ### 목표
 AndroidApp의 Gradle 빌드 설정에 React Native 런타임 의존성(`react-android`, `hermes-android`)을 추가하여, 네이티브 앱에서 RN 런타임을 로드할 수 있는 빌드 환경을 구성한다.
@@ -51,19 +51,23 @@ AndroidApp의 Gradle 빌드 설정에 React Native 런타임 의존성(`react-an
 **엔터프라이즈 제약**: Gradle 8.9 고정 → AGP 8.7.3 → RN 0.83.1의 `@react-native/gradle-plugin`(AGP 8.12.0 요구) 사용 불가.
 따라서 **RN Gradle Plugin 없이 수동으로 의존성을 추가하는 방식**으로 진행한다. 이는 실제 대형 프로젝트에서도 빌드 시스템 변경이 어려울 때 자주 사용되는 현실적인 접근법이다.
 
-### 작업 항목
+### 실제 적용된 변경
 
-- [ ] **settings.gradle.kts 수정**
-  - `dependencyResolutionManagement`에 RN Maven 저장소 추가 (Maven Central에 배포된 `react-android`, `hermes-android` 사용)
-  - `FAIL_ON_PROJECT_REPOS` 정책과의 충돌 해결 (필요 시 `PREFER_SETTINGS`로 변경)
-- [ ] **app/build.gradle.kts 수정**
-  - `react-android`, `hermes-android` 의존성 직접 추가 (버전 명시)
-  - RN Gradle Plugin 없이 수동 설정
-- [ ] **libs.versions.toml 업데이트**
-  - RN 관련 라이브러리 버전 카탈로그에 등록 (reactNative = "0.83.1")
-- [ ] 의존성 트리 확인으로 충돌 검증: `./gradlew app:dependencies`
-- [ ] 빌드 성공 확인: `./gradlew assembleDebug`
-- [ ] 디바이스에서 기존 앱 정상 동작 확인
+- [x] **settings.gradle.kts**: 변경 불필요 (Maven Central이 이미 설정되어 있고, `react-android`/`hermes-android` 모두 Maven Central에 배포됨)
+- [x] **app/build.gradle.kts 수정**
+  - `react-android:0.83.1`, `hermes-android:0.14.0` 의존성 추가
+  - `buildConfig = true` 활성화 (BuildConfig.DEBUG 사용 준비)
+  - `jniLibs.useLegacyPackaging = true` (RN SoLoader 비압축 로드용)
+- [x] **libs.versions.toml 업데이트**
+  - `reactAndroid = "0.83.1"`, `hermesAndroid = "0.14.0"` 버전 등록
+  - `react-android`, `hermes-android` 라이브러리 카탈로그 등록
+- [x] 의존성 트리에서 `react-android:0.83.1`, `hermes-android:0.14.0` 확인
+- [x] 빌드 성공 (`./gradlew assembleDebug`)
+- [x] 디바이스에서 기존 앱 정상 동작 확인
+
+### 발견 사항
+- `hermes-android`의 실제 Maven 좌표는 `com.facebook.react:hermes-android`가 아닌 `com.facebook.hermes:hermes-android:0.14.0`으로 리다이렉트됨
+- Debug APK: 92MB (Hermes .so가 4개 ABI 모두 포함. Release AAB에서는 ABI 분리로 감소)
 
 ### RN Gradle Plugin을 사용하지 않으면?
 | 자동 처리되던 것 | 수동 처리 방법 |
@@ -76,54 +80,67 @@ AndroidApp의 Gradle 빌드 설정에 React Native 런타임 의존성(`react-an
 ### 학습 포인트
 - **엔터프라이즈 현실**: 빌드 도구 버전 제약으로 인해 공식 RN 빌드 플러그인을 사용할 수 없는 상황에서의 대안 전략
 - `react-android`, `hermes-android`는 Maven Central에 배포되므로 Gradle Plugin 없이도 의존성으로 추가 가능
-- RN Gradle Plugin이 자동화하는 작업들을 수동으로 처리하는 방법 이해
+- `buildConfig = true`: AGP 8.0+에서 BuildConfig 클래스 생성이 기본 비활성화. 명시적으로 활성화 필요
+- `jniLibs.useLegacyPackaging = true`: RN의 SoLoader가 .so 파일을 mmap으로 직접 로드하기 위해 비압축 필요
 
-### 완료 기준
-- `./gradlew assembleDebug` 빌드 성공 (RN 의존성 포함)
-- `./gradlew app:dependencies`에서 `react-android`, `hermes-android` 확인 가능
-- 기존 Compose UI가 깨지지 않고 정상 동작
+### 완료 기준 [달성]
+- [x] `./gradlew assembleDebug` 빌드 성공 (RN 의존성 포함)
+- [x] `./gradlew app:dependencies`에서 `react-android`, `hermes-android` 확인 가능
+- [x] 기존 Compose UI가 깨지지 않고 정상 동작
 
 ---
 
-## Task 3: ReactNativeHost Hilt 싱글톤 구현
+## Task 3: ReactHost Hilt 싱글톤 구현 (New Architecture) [완료]
 
 ### 목표
-Hilt DI를 통해 `ReactNativeHost`(또는 New Architecture의 `ReactHost`)를 앱 전역 싱글톤으로 관리하는 기반을 구축한다.
+Hilt DI를 통해 `ReactHost`(New Architecture)를 앱 전역 싱글톤으로 관리하는 기반을 구축한다.
 
 ### 배경
-브라운필드 앱에서 RN 런타임은 반드시 싱글톤이어야 한다. Hermes 엔진을 중복 로드하면 메모리가 폭증하고, ReactInstanceManager가 여러 개면 JS 컨텍스트 간 상태 공유가 불가능하다. 현재 `AppModule.kt`에 빈 Hilt 모듈이 준비되어 있다.
+브라운필드 앱에서 RN 런타임은 반드시 싱글톤이어야 한다. Hermes 엔진을 중복 로드하면 메모리가 폭증하고, JS 컨텍스트 간 상태 공유가 불가능하다.
 
-### 작업 항목
+### 아키텍처 결정: New Architecture 선택
 
-- [ ] **New Architecture 여부에 따른 분기 결정**
-  - `newArchEnabled=true`(Fabric/TurboModules) → `ReactHost` + `ReactSurfaceView` 사용
-  - `newArchEnabled=false`(Bridge) → `ReactNativeHost` + `ReactRootView` 사용
-  - RN 0.83.1의 기본값과 브라운필드에서의 권장 설정 확인
-- [ ] **AppModule.kt에 Provider 구현**
-  - `@Provides @Singleton`으로 ReactNativeHost(또는 ReactHost) 제공
-  - `getUseDeveloperSupport()` → `BuildConfig.DEBUG`
-  - `getPackages()` → `PackageList(application).packages`
-  - `getJSMainModuleName()` → `"index"` (RnApp의 index.js 진입점)
-  - `getBundleAssetName()` → `"index.android.bundle"` (Release 번들 파일명)
-- [ ] **MainApplication.kt 수정**
-  - 필요 시 `ReactApplication` 인터페이스 구현
-  - Hilt가 관리하는 ReactNativeHost와 Application 클래스의 관계 정립
-- [ ] **초기화 타이밍 전략 결정**
-  - Lazy 초기화 (기본, RN 화면 진입 시) vs Eager 초기화 (앱 시작 시 백그라운드)
-  - Lazy의 장점: 앱 콜드 스타트 영향 없음
-  - Lazy의 단점: RN 화면 최초 진입 시 1~3초 지연
-- [ ] 빌드 및 앱 실행 확인 (RN 화면 없이도 크래시 없이 동작)
+| 항목 | Bridge (레거시) | New Architecture (선택) |
+|------|---------------|----------------------|
+| 핵심 클래스 | `ReactNativeHost` + `ReactInstanceManager` | `ReactHost` |
+| JS 통신 | Bridge (JSON 직렬화/역직렬화) | JSI (직접 호출, 오버헤드 없음) |
+| 렌더러 | Old Renderer | Fabric (C++에서 UI 트리 직접 관리) |
+| 네이티브 모듈 | NativeModules (모두 앱 시작 시 로드) | TurboModules (지연 로딩) |
+| RN 0.83.1 | 레거시 지원 | **기본값** |
+
+### 실제 적용된 변경
+
+- [x] **New Architecture(ReactHost) 선택** — RN 0.83.1의 기본 아키텍처
+- [x] **MainApplication.kt 수정**
+  - `ReactApplication` 인터페이스 구현 (`reactHost` property)
+  - `ReactHost`를 `by lazy`로 싱글톤 생성 (`getDefaultReactHost()` 사용)
+  - `SoLoader.init()`으로 네이티브 라이브러리 초기화
+  - `MainReactPackage()` 코어 모듈 패키지 등록
+- [x] **AppModule.kt에 Hilt Provider 구현**
+  - `@Provides @Singleton`으로 `ReactHost` 제공
+  - `MainApplication`의 인스턴스를 그대로 반환하여 동일 싱글톤 공유
+- [x] **AndroidManifest.xml 수정**
+  - `INTERNET` 권한 추가 (Metro 서버 통신)
+  - `usesCleartextTraffic=true` (HTTP 통신 허용)
+- [x] **gradle.properties**: `newArchEnabled=true` 유지
+- [x] 빌드 및 디바이스에서 정상 동작 확인
+
+### 해결한 이슈
+- `ReactApplication.getReactNativeHost()` → RN 0.83에서 제거됨. `reactHost` property로 대체
+- `ReactNativeApplicationEntryPoint.loadReactNative()` → RN Gradle Plugin이 생성하는 코드. `SoLoader.init()` 직접 사용
+- `DefaultSoLoader` → `internal` 클래스로 외부 접근 불가. `SoLoader.init()` public API 사용
 
 ### 학습 포인트
-- ReactNativeHost vs ReactHost (New Architecture)의 차이
-- ReactInstanceManager의 역할: JS 엔진 관리, 번들 로딩, 네이티브 모듈 레지스트리
-- Hilt의 `SingletonComponent` 스코프와 Application 생명주기의 관계
-- 브라운필드에서 ReactApplication 인터페이스 구현의 필요성과 대안
+- **ReactHost vs ReactNativeHost**: New Architecture에서는 ReactHost가 Hermes + Fabric + TurboModules를 통합 관리
+- **`getDefaultReactHost()`**: ReactHost를 기본 설정으로 생성하는 팩토리 메서드
+- **`SoLoader.init()`**: RN의 모든 네이티브 코드(.so) 실행 전에 반드시 호출 필요
+- **`by lazy`**: 앱 시작이 아닌 최초 접근 시점에 초기화 → 콜드 스타트 영향 없음
+- **ReactApplication 인터페이스**: RN 내부(dev menu, error overlay)가 ReactHost를 찾는 표준 경로
 
-### 완료 기준
-- 앱 빌드 및 실행 시 Hilt injection 에러 없음
-- Logcat에서 ReactNativeHost 또는 ReactHost 싱글톤 생성 로그 확인 가능
-- 기존 5개 탭 네비게이션 정상 동작
+### 완료 기준 [달성]
+- [x] 앱 빌드 및 실행 시 Hilt injection 에러 없음
+- [x] 크래시/에러 로그 없음
+- [x] 기존 5개 탭 네비게이션 정상 동작
 
 ---
 
