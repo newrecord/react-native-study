@@ -1,7 +1,5 @@
 package com.example.androidapp.navigation
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -20,9 +18,10 @@ import com.example.androidapp.ui.screens.HistoryScreen
 import com.example.androidapp.ui.screens.HomeScreen
 import com.example.androidapp.ui.screens.SearchScreen
 import com.example.androidapp.ui.screens.SettingsScreen
+import com.facebook.react.ReactHost
 
 @Composable
-fun AppNavigation() {
+fun AppNavigation(reactHost: ReactHost) {
     val navController = rememberNavController()
     var selectedItem by remember { mutableStateOf(NavItem.HOME) }
 
@@ -52,7 +51,7 @@ fun AppNavigation() {
             composable(NavItem.HISTORY.route) { HistoryScreen() }
             composable(NavItem.SEARCH.route) { SearchScreen() }
             composable(NavItem.CHAT.route) { ChatScreen() }
-            composable(NavItem.SETTINGS.route) { SettingsScreen() }
+            composable(NavItem.SETTINGS.route) { SettingsScreen(reactHost) }
         }
     }
 }

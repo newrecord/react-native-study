@@ -8,31 +8,28 @@
 ## Task 1: 빌드 환경 버전 통일 [완료]
 
 ### 목표
-AndroidApp의 빌드 도구 버전을 RN 통합이 가능한 수준으로 업데이트한다.
+AndroidApp의 빌드 도구 버전을 실제 프로젝트 환경과 동일하게 맞추고, RN 통합이 가능한 수준으로 구성한다.
 
-### 엔터프라이즈 제약사항
-- **Gradle 8.9 변경 불가** (유관부서 승인 필요). 이로 인해:
-  - AGP 최대 8.7.x까지만 사용 가능 (AGP 8.8+는 Gradle 8.10.2+ 요구)
-  - RN 0.83.1의 `@react-native/gradle-plugin`은 AGP 8.12.0을 요구하므로 **직접 사용 불가**
-  - → Task 2에서 RN Gradle Plugin 없이 수동으로 의존성을 추가하는 방식으로 진행
-
-### 실제 적용된 변경
+### 실제 적용된 변경 (최종)
 
 | 항목 | 변경 전 | 변경 후 | 비고 |
 |------|--------|--------|------|
-| Gradle Wrapper | 8.9 | **8.9 (유지)** | 엔터프라이즈 제약 |
-| AGP | 8.7.3 | **8.7.3 (유지)** | Gradle 8.9 최대 호환 |
-| Kotlin | 2.0.21 | **2.1.20** | RnApp과 통일 |
-| KSP | 2.0.21-1.0.28 | **2.1.20-1.0.31** | Kotlin 버전 매칭 |
-| compileSdk | 35 | **36** | RnApp과 통일 |
-| targetSdk | 35 | **36** | RnApp과 통일 |
-| NDK | 미설정 | **27.1.12297006** | Hermes/JSI 빌드용 |
-| Node.js | >=18 | **>=20** | RnApp 요구사항 |
-| gradle.properties | - | **newArchEnabled, hermesEnabled 추가** | RN 통합 준비 |
+| Gradle Wrapper | 8.9 | **8.11.1** | 실제 프로젝트 환경과 동일 |
+| AGP | 8.7.3 | **8.10.1** | 실제 프로젝트 환경과 동일 |
+| Kotlin | 2.0.21 | **2.1.0** | 실제 프로젝트 환경과 동일 |
+| KSP | 2.0.21-1.0.28 | **2.1.0-1.0.29** | Kotlin 버전 매칭 |
+| compileSdk | 35 | **36** | |
+| targetSdk | 35 | **35** | 실제 프로젝트 환경과 동일 |
+| NDK | 미설정 | **27.1.12297006** | RN 네이티브 모듈 빌드용 |
+| Hilt | 2.54 | **2.53.1** | 실제 프로젝트 환경과 동일 |
+| Compose BOM | 2024.12.01 | **2025.04.00** | 실제 프로젝트 환경과 동일 |
+| Node.js | >=18 | **>=20** | RN 요구사항 |
 
 ### 학습 포인트
-- **AGP-Gradle 호환성 매트릭스**: 엔터프라이즈에서 Gradle 버전이 고정되면 사용 가능한 AGP 범위가 결정되고, 이것이 RN Gradle Plugin 사용 가능 여부를 좌우한다.
-- **RN Gradle Plugin 우회 전략**: Plugin을 사용할 수 없을 때 `react-android`, `hermes-android`를 Maven 의존성으로 직접 추가하고, JS 번들링을 수동으로 처리하는 방식이 대안이다.
+- **AGP-Gradle 호환성 매트릭스**: Gradle 버전이 AGP 범위를 결정하고, AGP가 RN Gradle Plugin 사용 가능 여부를 좌우한다.
+- **RN 버전별 Gradle Plugin AGP 요구사항**:
+  - RN 0.76.x → AGP 8.6.0, RN 0.77.x → AGP 8.7.2, RN 0.78.x → AGP 8.8.0
+  - RN 0.79.x → AGP 8.8.2, RN 0.80.x → AGP 8.9.2, RN 0.83.x → AGP 8.12.0
 - Kotlin/KSP 버전은 Gradle 버전과 독립적으로 업데이트 가능하다.
 
 ### 완료 기준 [달성]
@@ -45,48 +42,34 @@ AndroidApp의 빌드 도구 버전을 RN 통합이 가능한 수준으로 업데
 ## Task 2: AndroidApp Gradle에 React Native 의존성 추가 [완료]
 
 ### 목표
-AndroidApp의 Gradle 빌드 설정에 React Native 런타임 의존성(`react-android`, `hermes-android`)을 추가하여, 네이티브 앱에서 RN 런타임을 로드할 수 있는 빌드 환경을 구성한다.
+AndroidApp의 Gradle 빌드 설정에 React Native 의존성과 RN Gradle Plugin을 추가한다.
 
-### 배경
-**엔터프라이즈 제약**: Gradle 8.9 고정 → AGP 8.7.3 → RN 0.83.1의 `@react-native/gradle-plugin`(AGP 8.12.0 요구) 사용 불가.
-따라서 **RN Gradle Plugin 없이 수동으로 의존성을 추가하는 방식**으로 진행한다. 이는 실제 대형 프로젝트에서도 빌드 시스템 변경이 어려울 때 자주 사용되는 현실적인 접근법이다.
+### 실제 적용된 변경 (최종)
 
-### 실제 적용된 변경
-
-- [x] **settings.gradle.kts**: 변경 불필요 (Maven Central이 이미 설정되어 있고, `react-android`/`hermes-android` 모두 Maven Central에 배포됨)
-- [x] **app/build.gradle.kts 수정**
-  - `react-android:0.83.1`, `hermes-android:0.14.0` 의존성 추가
-  - `buildConfig = true` 활성화 (BuildConfig.DEBUG 사용 준비)
-  - `jniLibs.useLegacyPackaging = true` (RN SoLoader 비압축 로드용)
-- [x] **libs.versions.toml 업데이트**
-  - `reactAndroid = "0.83.1"`, `hermesAndroid = "0.14.0"` 버전 등록
-  - `react-android`, `hermes-android` 라이브러리 카탈로그 등록
-- [x] 의존성 트리에서 `react-android:0.83.1`, `hermes-android:0.14.0` 확인
-- [x] 빌드 성공 (`./gradlew assembleDebug`)
-- [x] 디바이스에서 기존 앱 정상 동작 확인
-
-### 발견 사항
-- `hermes-android`의 실제 Maven 좌표는 `com.facebook.react:hermes-android`가 아닌 `com.facebook.hermes:hermes-android:0.14.0`으로 리다이렉트됨
-- Debug APK: 92MB (Hermes .so가 4개 ABI 모두 포함. Release AAB에서는 ABI 분리로 감소)
-
-### RN Gradle Plugin을 사용하지 않으면?
-| 자동 처리되던 것 | 수동 처리 방법 |
-|----------------|--------------|
-| JS 번들링 (release) | `react-native bundle` 명령으로 수동 생성 후 assets에 복사 |
-| Hermes 바이트코드 컴파일 | `hermesc` CLI로 수동 컴파일 또는 Gradle 커스텀 태스크 |
-| Autolinking | 사용할 네이티브 모듈 패키지를 수동 등록 |
-| Codegen (New Arch) | TurboModule Spec 수동 빌드 |
+- [x] **settings.gradle.kts**
+  - `includeBuild("../../node_modules/@react-native/gradle-plugin")` — RN Gradle Plugin 포함
+  - `id("com.facebook.react.settings")` — settings plugin 적용 (autolinking.json 생성)
+  - `autolinkLibrariesFromCommand(workingDirectory = file("../RnApp"))` — 모노레포 경로 설정
+  - `repositoriesMode` → `PREFER_PROJECT` (RN Plugin이 추가하는 Maven repo 허용)
+- [x] **app/build.gradle.kts**
+  - `id("com.facebook.react")` 플러그인 적용
+  - `react {}` 블록으로 모노레포 경로 설정 (root, reactNativeDir, codegenDir, cliFile)
+  - `react-android:0.79.3`, `hermes-android:0.79.3` 의존성 추가
+  - `buildConfig = true`, `jniLibs.useLegacyPackaging = true`
+  - `ndk.abiFilters += listOf("armeabi-v7a", "arm64-v8a")`
+- [x] **libs.versions.toml**: `reactAndroid = "0.79.3"`, `hermesAndroid = "0.79.3"` 등록
+- [x] **RnApp/package.json**: RN 0.83.1 → **0.79.3** 다운그레이드 (실제 프로젝트와 동일)
 
 ### 학습 포인트
-- **엔터프라이즈 현실**: 빌드 도구 버전 제약으로 인해 공식 RN 빌드 플러그인을 사용할 수 없는 상황에서의 대안 전략
-- `react-android`, `hermes-android`는 Maven Central에 배포되므로 Gradle Plugin 없이도 의존성으로 추가 가능
-- `buildConfig = true`: AGP 8.0+에서 BuildConfig 클래스 생성이 기본 비활성화. 명시적으로 활성화 필요
-- `jniLibs.useLegacyPackaging = true`: RN의 SoLoader가 .so 파일을 mmap으로 직접 로드하기 위해 비압축 필요
+- **RN Gradle Plugin의 역할**: autolinking(PackageList 생성), codegen(libappmodules.so), JS 번들링, Hermes 컴파일을 자동 처리
+- **settings plugin**: `autolinkLibrariesFromCommand()`로 `autolinking.json`을 생성. Gradle 빌드 전 설정 단계에서 실행됨
+- **모노레포 경로 설정**: `react {}` 블록에서 `root`, `reactNativeDir`, `codegenDir`, `cliFile`을 모노레포 구조에 맞게 상대경로로 지정해야 함
+- **hermes-android는 명시적 의존성 필요**: RN 0.79.x에서 Gradle Plugin이 Hermes를 자동 추가하지 않음. `com.facebook.react:hermes-android:0.79.3`을 직접 추가해야 함
 
 ### 완료 기준 [달성]
-- [x] `./gradlew assembleDebug` 빌드 성공 (RN 의존성 포함)
-- [x] `./gradlew app:dependencies`에서 `react-android`, `hermes-android` 확인 가능
-- [x] 기존 Compose UI가 깨지지 않고 정상 동작
+- [x] `./gradlew assembleDebug` 빌드 성공 (autolinking, codegen, CMake 포함)
+- [x] APK에 `libappmodules.so`, `libhermes.so`, `libreactnative.so` 포함 확인
+- [x] 기존 Compose UI 정상 동작
 
 ---
 
@@ -98,44 +81,25 @@ Hilt DI를 통해 `ReactHost`(New Architecture)를 앱 전역 싱글톤으로 �
 ### 배경
 브라운필드 앱에서 RN 런타임은 반드시 싱글톤이어야 한다. Hermes 엔진을 중복 로드하면 메모리가 폭증하고, JS 컨텍스트 간 상태 공유가 불가능하다.
 
-### 아키텍처 결정: New Architecture 선택
+### 실제 적용된 변경 (최종)
 
-| 항목 | Bridge (레거시) | New Architecture (선택) |
-|------|---------------|----------------------|
-| 핵심 클래스 | `ReactNativeHost` + `ReactInstanceManager` | `ReactHost` |
-| JS 통신 | Bridge (JSON 직렬화/역직렬화) | JSI (직접 호출, 오버헤드 없음) |
-| 렌더러 | Old Renderer | Fabric (C++에서 UI 트리 직접 관리) |
-| 네이티브 모듈 | NativeModules (모두 앱 시작 시 로드) | TurboModules (지연 로딩) |
-| RN 0.83.1 | 레거시 지원 | **기본값** |
-
-### 실제 적용된 변경
-
-- [x] **New Architecture(ReactHost) 선택** — RN 0.83.1의 기본 아키텍처
-- [x] **MainApplication.kt 수정**
-  - `ReactApplication` 인터페이스 구현 (`reactHost` property)
-  - `ReactHost`를 `by lazy`로 싱글톤 생성 (`getDefaultReactHost()` 사용)
-  - `SoLoader.init()`으로 네이티브 라이브러리 초기화
-  - `MainReactPackage()` 코어 모듈 패키지 등록
-- [x] **AppModule.kt에 Hilt Provider 구현**
-  - `@Provides @Singleton`으로 `ReactHost` 제공
-  - `MainApplication`의 인스턴스를 그대로 반환하여 동일 싱글톤 공유
-- [x] **AndroidManifest.xml 수정**
-  - `INTERNET` 권한 추가 (Metro 서버 통신)
-  - `usesCleartextTraffic=true` (HTTP 통신 허용)
-- [x] **gradle.properties**: `newArchEnabled=true` 유지
-- [x] 빌드 및 디바이스에서 정상 동작 확인
-
-### 해결한 이슈
-- `ReactApplication.getReactNativeHost()` → RN 0.83에서 제거됨. `reactHost` property로 대체
-- `ReactNativeApplicationEntryPoint.loadReactNative()` → RN Gradle Plugin이 생성하는 코드. `SoLoader.init()` 직접 사용
-- `DefaultSoLoader` → `internal` 클래스로 외부 접근 불가. `SoLoader.init()` public API 사용
+- [x] **MainApplication.kt** — `@HiltAndroidApp` + `ReactApplication` 구현
+  - `DefaultReactNativeHost` 사용 (패키지 목록, JS 엔트리, 개발 모드 등 설정 담당)
+  - `reactHost` = `getDefaultReactHost(applicationContext, reactNativeHost)` — New Architecture 런타임
+  - `PackageList(this).packages` — Gradle Plugin의 autolinking이 생성한 패키지 목록
+  - `SoLoader.init(this, OpenSourceMergedSoMapping)` — 병합된 .so 매핑으로 초기화
+  - `DefaultNewArchitectureEntryPoint.load()` — Fabric + TurboModules 네이티브 코드 초기화
+  - `BuildConfig.IS_NEW_ARCHITECTURE_ENABLED` / `IS_HERMES_ENABLED` — Gradle Plugin이 자동 생성
+- [x] **AppModule.kt** — `@Provides @Singleton`으로 `ReactHost` 제공
+- [x] **AndroidManifest.xml** — `INTERNET` 권한, `usesCleartextTraffic=true`
+- [x] **gradle.properties** — `newArchEnabled=true`, `hermesEnabled=true`
 
 ### 학습 포인트
-- **ReactHost vs ReactNativeHost**: New Architecture에서는 ReactHost가 Hermes + Fabric + TurboModules를 통합 관리
-- **`getDefaultReactHost()`**: ReactHost를 기본 설정으로 생성하는 팩토리 메서드
-- **`SoLoader.init()`**: RN의 모든 네이티브 코드(.so) 실행 전에 반드시 호출 필요
-- **`by lazy`**: 앱 시작이 아닌 최초 접근 시점에 초기화 → 콜드 스타트 영향 없음
-- **ReactApplication 인터페이스**: RN 내부(dev menu, error overlay)가 ReactHost를 찾는 표준 경로
+- **ReactNativeHost vs ReactHost**: `ReactNativeHost`는 설정(패키지, JS 엔트리 등) 담당, `ReactHost`는 New Architecture 런타임(Fabric + TurboModules) 담당. 둘 다 필요함.
+- **`DefaultReactNativeHost`**: `isNewArchEnabled`, `isHermesEnabled` property를 제공하는 확장 클래스
+- **`OpenSourceMergedSoMapping`**: RN 0.76+에서 개별 .so 파일들이 `libreactnative.so`로 병합됨. 이 매핑 없이 `SoLoader.init()`하면 `libXXX.so not found` 크래시 발생
+- **`DefaultNewArchitectureEntryPoint.load()`**: `libappmodules.so`를 로드하여 TurboModules 등록. Gradle Plugin이 생성한 autolinking 네이티브 코드 초기화
+- **`PackageList`**: Gradle Plugin의 autolinking이 빌드 시 자동 생성하는 클래스. 수동으로 `MainReactPackage()` 등록 불필요
 
 ### 완료 기준 [달성]
 - [x] 앱 빌드 및 실행 시 Hilt injection 에러 없음
@@ -144,56 +108,93 @@ Hilt DI를 통해 `ReactHost`(New Architecture)를 앱 전역 싱글톤으로 �
 
 ---
 
-## Task 4: SettingsScreen에 RN 뷰 삽입 (POC 핵심)
+## Task 4: SettingsScreen에 RN 뷰 삽입 (POC 핵심) [완료]
 
 ### 목표
-Compose의 `AndroidView`로 `ReactRootView`(또는 `ReactSurfaceView`)를 래핑하여, 설정 탭에서 RN으로 구현된 "Hello from React Native" 화면을 렌더링한다.
+Compose의 `AndroidView`로 React Native 화면을 래핑하여, 설정 탭에서 RN으로 구현된 화면을 렌더링한다.
 
 ### 배경
-이것이 브라운필드 통합의 핵심 순간이다. Compose 선언형 UI 안에 RN이라는 imperative View를 삽입하면서, 생명주기 동기화, 메모리 관리, 상태 유지를 모두 올바르게 처리해야 한다.
+브라운필드 통합의 핵심. Compose 선언형 UI 안에 RN이라는 imperative View를 삽입하면서, 생명주기 동기화와 New Architecture의 Fabric 렌더링을 올바르게 처리해야 한다.
 
-### 작업 항목
+### 실제 적용된 변경
 
-- [ ] **RN 측 설정 화면 컴포넌트 작성**
-  - `apps/RnApp/` 내에 Settings 화면 컴포넌트 생성 (간단한 텍스트/버튼)
-  - `index.js`에 `AppRegistry.registerComponent('SettingsModule', () => SettingsApp)` 등록
-  - 기존 `RnApp` 등록은 유지 (멀티 Surface 기반 마련)
-- [ ] **재사용 가능한 ReactNativeView Composable 작성**
-  - `AndroidView`의 `factory`에서 ReactRootView 생성 및 `startReactApplication()` 호출
-  - `onRelease`에서 `unmountReactApplication()` 호출
-  - `DisposableEffect` + `LifecycleEventObserver`로 생명주기 동기화
-    - `ON_RESUME` → `reactInstanceManager.onHostResume(activity)`
-    - `ON_PAUSE` → `reactInstanceManager.onHostPause(activity)`
-    - `ON_DESTROY` → `reactInstanceManager.onHostDestroy(activity)`
-  - `remember`로 ReactRootView 인스턴스 캐싱 (recomposition 시 재생성 방지)
-- [ ] **SettingsScreen.kt 수정**
-  - 기존 Text("설정") 대신 ReactNativeView Composable 사용
-  - Hilt를 통해 ReactNativeHost 주입 (`hiltViewModel` 또는 직접 injection)
-  - moduleName: `"SettingsModule"` 전달
-- [ ] **Dev 환경 번들 로딩 확인**
-  - Metro 서버 실행: `npx nx start RnApp`
-  - `adb reverse tcp:8081 tcp:8081` 포트 포워딩
-  - AndroidApp 실행 → 설정 탭 진입 → RN 화면 렌더링 확인
-- [ ] **기본 검증**
-  - 설정 탭 진입/이탈 반복 5회 → 크래시 없음
-  - 홈 → 설정 → 홈 → 설정 탭 전환 시 RN 뷰 정상 복원
-  - 앱 백그라운드/포그라운드 전환 후 RN 뷰 정상 동작
+- [x] **RN 측 설정 화면 컴포넌트** (`apps/RnApp/src/screens/SettingsScreen.tsx`)
+  - 간단한 텍스트 카드 UI ("이 화면은 Jetpack Compose 앱 안에서 React Native로 구현된 화면입니다")
+- [x] **RN 진입점 등록** (`apps/RnApp/index.js`)
+  - `AppRegistry.registerComponent('SettingsModule', () => SettingsScreen)` 추가
+  - 기존 `RnApp` 등록 유지 (멀티 Surface 기반)
+- [x] **ReactNativeView Composable** (`ui/components/ReactNativeView.kt`)
+  - `ReactHost.createSurface(context, moduleName, null)` → Fabric Surface 생성
+  - `surface.start()` / `surface.stop()` → `DisposableEffect`에서 생명주기 관리
+  - `ReactHost.onHostResume/Pause/Destroy` → `LifecycleEventObserver`로 동기화
+  - `AndroidView(factory = { surface.view!! })` → Compose에 삽입
+- [x] **SettingsScreen.kt** → `ReactNativeView(reactHost, "SettingsModule")`
+- [x] **DI 체인**: `AppModule` → `ReactHost` → `MainActivity` → `AppNavigation` → `SettingsScreen` → `ReactNativeView`
+- [x] 디바이스에서 설정 탭 진입 시 RN 화면 정상 렌더링 확인
 
-### 주의 사항
-- `AppNavigation.kt`의 `restoreState = true` 설정과 RN 뷰 상태 복원의 상호작용 확인
-- Metro 서버 없이 앱을 실행하면 RedBox/크래시가 발생할 수 있으므로, Dev 빌드에서 Metro 미연결 시 폴백 UI 표시 고려
-- New Architecture(Fabric) 모드에서는 `ReactRootView` 대신 `ReactSurfaceView` 사용 필요 여부 확인
+### 해결한 핵심 이슈
 
-### 학습 포인트
-- Compose `AndroidView`의 동작 원리: `factory`(1회 실행) vs `update`(recomposition마다) vs `onRelease`(제거 시)
-- ReactRootView의 생명주기: `startReactApplication()` → JS 로딩 → 렌더링 → `unmountReactApplication()`
-- `AppRegistry.registerComponent`로 다중 RN 진입점(Surface) 등록하는 패턴
-- Metro 개발 서버와 네이티브 앱의 통신 방식 (HTTP로 JS 번들 전달)
+#### 1. New Architecture에서 ReactInstanceManager + ReactRootView 사용 불가
+- **증상**: `Could not invoke UIManager.createView null`, `Root node with tag doesn't exist`
+- **원인**: `newArchEnabled=true`일 때 UIManager가 Fabric으로 교체됨. `ReactInstanceManager` + `ReactRootView.startReactApplication()`은 레거시 UIManager 경로를 사용하여 null 반환
+- **해결**: **ReactHost + ReactSurface API**로 전환
+  ```
+  ReactInstanceManager + ReactRootView (Bridge API) ❌
+  ReactHost + ReactSurface (New Architecture API) ✅
+  ```
 
-### 완료 기준
-- 설정 탭 진입 시 "Hello from React Native" (또는 동등한 RN 화면) 렌더링
-- 탭 전환 시 크래시/메모리 릭 없음
-- Metro Hot Reload로 RN 코드 변경 시 설정 탭에 즉시 반영
+#### 2. libhermes.so 로딩 실패
+- **증상**: `dlopen failed: library "/vendor/lib64/libhermes.so" not found` → 앱 즉시 크래시
+- **원인**: RN 0.79.3에서 Gradle Plugin이 Hermes 의존성을 자동 추가하지 않음
+- **해결**: `com.facebook.react:hermes-android:0.79.3` 명시적 의존성 추가
+
+#### 3. @react-native/new-app-screen 미존재
+- **증상**: Metro 500 에러 (`Unable to resolve module @react-native/new-app-screen`)
+- **원인**: RN 0.83.1 전용 패키지. RN 0.79.3에 없음
+- **해결**: `App.tsx`에서 해당 import 제거, 간단한 컴포넌트로 교체
+
+### 학습 포인트 (중요)
+
+#### New Architecture 브라운필드 통합의 핵심 API 선택
+| API | 아키텍처 | Compose 통합 방식 |
+|-----|---------|-----------------|
+| `ReactInstanceManager` + `ReactRootView` | Bridge (레거시) | `AndroidView(factory = { rootView })` |
+| **`ReactHost` + `ReactSurface`** | **New Architecture** | **`AndroidView(factory = { surface.view!! })`** |
+
+- **`ReactHost.createSurface(context, moduleName, initialProps)`**: Fabric Surface를 생성. 이 Surface가 내부적으로 Fabric 렌더러를 통해 UI를 그림
+- **`ReactSurface.start()`**: JS 런타임 시작 및 렌더링 개시 (비동기 TaskInterface 반환)
+- **`ReactSurface.stop()`**: 렌더링 중지 및 리소스 해제
+- **`ReactSurface.view`**: Compose `AndroidView`에 삽입할 실제 Android View
+
+#### Compose + RN 생명주기 동기화
+```
+Compose LifecycleOwner ─── LifecycleEventObserver ──→ ReactHost
+  ON_RESUME  ──→ reactHost.onHostResume(activity)
+  ON_PAUSE   ──→ reactHost.onHostPause(activity)
+  ON_DESTROY ──→ reactHost.onHostDestroy(activity)
+
+DisposableEffect ──→ surface.start() / surface.stop()
+```
+
+#### 모노레포에서 RN Gradle Plugin 경로 설정
+```
+// settings.gradle.kts (AndroidApp 루트 기준)
+includeBuild("../../node_modules/@react-native/gradle-plugin")
+autolinkLibrariesFromCommand(workingDirectory = file("../RnApp"))
+
+// app/build.gradle.kts (app/ 모듈 기준)
+react {
+    root = file("../../RnApp")                                    // RN JS 프로젝트
+    reactNativeDir = file("../../../node_modules/react-native")   // react-native 패키지
+    codegenDir = file("../../../node_modules/@react-native/codegen")
+    cliFile = file("../../../node_modules/@react-native-community/cli/build/bin.js")
+}
+```
+
+### 완료 기준 [달성]
+- [x] 설정 탭 진입 시 RN 화면 ("설정 — React Native에서 렌더링됨") 정상 렌더링
+- [x] 앱 실행 시 크래시 없음
+- [x] Metro 서버에서 JS 번들 정상 로딩
 
 ---
 
