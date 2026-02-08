@@ -9,6 +9,8 @@ hilt = "2.54"
 hiltNavigationCompose = "1.2.0"
 navigationCompose = "2.8.6"
 ksp = "2.1.20-1.0.31"
+reactAndroid = "0.83.1"
+hermesAndroid = "0.14.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -25,6 +27,8 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+react-android = { group = "com.facebook.react", name = "react-android", version.ref = "reactAndroid" }
+hermes-android = { group = "com.facebook.hermes", name = "hermes-android", version.ref = "hermesAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

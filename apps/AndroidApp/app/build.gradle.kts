@@ -42,6 +42,14 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
+    }
+
+    // RN 네이티브 라이브러리(.so) 패키징 설정
+    packaging {
+        jniLibs {
+            useLegacyPackaging = true
+        }
     }
 }
 
@@ -64,6 +72,12 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
     implementation(libs.hilt.navigation.compose)
-    
+
+    // React Native - 브라운필드 통합
+    // react-android: RN 런타임 코어 (Bridge, JSI, ViewManager, Yoga 레이아웃)
+    implementation(libs.react.android)
+    // hermes-android: Hermes JS 엔진 (바이트코드 사전 컴파일로 빠른 시작)
+    implementation(libs.hermes.android)
+
     debugImplementation(libs.androidx.ui.tooling)
 }
