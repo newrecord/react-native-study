@@ -18,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -30,8 +31,8 @@ private const val STORAGE_KEY = "shared_text"
 @Composable
 fun HomeScreen() {
     val context = LocalContext.current
-    var inputText by remember { mutableStateOf("") }
-    var loadedText by remember { mutableStateOf<String?>(null) }
+    var inputText by rememberSaveable { mutableStateOf("") }
+    var loadedText by rememberSaveable { mutableStateOf<String?>(null) }
 
     val prefs = remember {
         context.getSharedPreferences(AppBridgeModule.PREFS_NAME, Context.MODE_PRIVATE)

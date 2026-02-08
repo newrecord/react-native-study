@@ -2,6 +2,7 @@ package com.example.androidapp.ui.components
 
 import android.app.Activity
 import android.os.Bundle
+import android.view.ViewGroup
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.remember
@@ -16,10 +17,10 @@ import com.facebook.react.ReactHost
 /**
  * Compose 안에서 React Native 화면을 렌더링하는 재사용 가능한 Composable.
  *
- * New Architecture의 ReactHost + ReactSurface API를 사용한다.
- * ReactHost.createSurface()로 Fabric Surface를 생성하고,
- * surface.start()로 렌더링을 시작한다.
- * ReactHost의 생명주기를 Compose LifecycleOwner와 동기화한다.
+ * SurfaceHolder를 통해 Surface를 캐싱하여 탭 전환 시 JS 상태를 유지한다.
+ * - 탭 전환(Composable dispose): View를 부모에서 분리만 하고 Surface는 유지
+ * - 탭 복귀(Composable recompose): 캐싱된 Surface의 View를 재사용
+ * - Activity destroy: SurfaceHolder.clear()로 전체 정리
  *
  * @param reactHost Hilt로 주입받은 ReactHost 싱글톤
  * @param moduleName RN 측 AppRegistry.registerComponent()에 등록된 모듈 이름
@@ -37,28 +38,30 @@ fun ReactNativeView(
     val lifecycleOwner = LocalLifecycleOwner.current
 
     val surface = remember(moduleName) {
-        reactHost.createSurface(context, moduleName, initialProperties)
+        SurfaceHolder.getOrCreate(reactHost, context, moduleName, initialProperties)
     }
 
-    DisposableEffect(lifecycleOwner, surface) {
+    DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
             when (event) {
                 Lifecycle.Event.ON_RESUME ->
                     reactHost.onHostResume(context as Activity)
                 Lifecycle.Event.ON_PAUSE ->
                     reactHost.onHostPause(context as Activity)
-                Lifecycle.Event.ON_DESTROY ->
+                Lifecycle.Event.ON_DESTROY -> {
                     reactHost.onHostDestroy(context as Activity)
+                    SurfaceHolder.clear()
+                }
                 else -> {}
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)
 
-        surface.start()
-
         onDispose {
             lifecycleOwner.lifecycle.removeObserver(observer)
-            surface.stop()
+            // Surface는 stop하지 않음 — JS 상태 유지를 위해 캐시에 보관
+            // View만 부모에서 분리하여 재사용 시 "already has a parent" 에러 방지
+            (surface.view?.parent as? ViewGroup)?.removeView(surface.view)
         }
     }
 

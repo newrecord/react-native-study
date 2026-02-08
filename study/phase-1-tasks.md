@@ -462,7 +462,7 @@ RN (SettingsScreen.tsx)
 
 ---
 
-## Task 6-2: RN Surface 탭 전환 시 UI 상태 유지
+## Task 6-2: RN Surface 탭 전환 시 UI 상태 유지 [완료]
 
 ### 목표
 설정 → 홈 → 설정으로 탭을 전환했을 때, RN 화면의 스크롤 위치와 입력 상태가 유지되도록 Surface 생명주기를 개선한다.
@@ -470,24 +470,77 @@ RN (SettingsScreen.tsx)
 ### 배경
 Task 6-1에서 설정 화면 하단에 입력/출력 폼을 추가하면, 스크롤하여 폼을 확인한 상태에서 홈 탭으로 전환 후 다시 설정 탭으로 돌아오면 RN Surface가 재생성되어 스크롤 위치와 입력값이 초기화되는 문제가 발생할 것으로 예상된다.
 
-### 작업 항목
+### 실제 적용된 변경
 
-- [ ] **현상 확인**: 설정 → 홈 → 설정 전환 시 RN UI 초기화 여부 확인
-- [ ] **원인 분석**: Compose Navigation의 `saveState`/`restoreState`와 ReactSurface 생명주기 간 상호작용 분석
-- [ ] **해결 방안 구현** (예상되는 접근법)
-  - ReactSurface를 탭 전환 시 destroy하지 않고 유지 (Composable 생명주기 관리)
-  - 또는 RN 측 상태 관리(useState/useRef)로 복원
-  - 또는 Compose의 `remember` + Surface 캐싱 전략
-- [ ] **검증**: 설정 → 홈 → 설정 전환 후 스크롤 위치, 입력값, 출력값 유지 확인
+- [x] **RN Surface 상태 유지 — SurfaceHolder 캐싱 도입**
+  - `SurfaceHolder.kt`: moduleName 기준으로 ReactSurface를 싱글톤 캐시에 보관
+  - `getOrCreate()` — 캐시에 있으면 기존 Surface 반환, 없으면 생성 후 `start()`
+  - `clear()` — Activity destroy 시에만 전체 Surface 정리
+- [x] **ReactNativeView.kt 생명주기 변경**
+  - **변경 전**: `onDispose` → `surface.stop()` (Surface 파괴 → JS 상태 소멸)
+  - **변경 후**: `onDispose` → `removeView(surface.view)` (View 분리만, Surface 유지)
+  - Activity `ON_DESTROY` 시에만 `SurfaceHolder.clear()` 호출
+- [x] **HomeScreen.kt 네이티브 상태 유지**
+  - `remember` → `rememberSaveable` 변경 (inputText, loadedText)
+  - Compose Navigation의 `saveState`/`restoreState`와 연동되어 상태 복원
+
+### 원인 분석
+
+#### 변경 전 문제 흐름
+```
+설정 탭 → 홈 탭 전환
+  1. Compose Navigation이 SettingsScreen Composable을 composition에서 제거
+  2. DisposableEffect.onDispose 호출
+  3. surface.stop() → Surface 파괴, JS 런타임 상태 소멸
+
+홈 탭 → 설정 탭 복귀
+  4. SettingsScreen Composable 재생성
+  5. remember(moduleName) → 새 Surface 생성
+  6. surface.start() → JS 초기 상태로 시작 (스크롤, 입력값 초기화)
+```
+
+#### 변경 후 해결 흐름
+```
+설정 탭 → 홈 탭 전환
+  1. Compose Navigation이 SettingsScreen Composable을 composition에서 제거
+  2. DisposableEffect.onDispose 호출
+  3. View만 부모에서 분리 (Surface는 캐시에 살아있음, JS 상태 유지)
+
+홈 탭 → 설정 탭 복귀
+  4. SettingsScreen Composable 재생성
+  5. SurfaceHolder.getOrCreate() → 캐시된 Surface 반환
+  6. AndroidView factory → 기존 Surface의 View 재사용 (스크롤, 입력값 유지)
+```
 
 ### 학습 포인트
-- Compose Navigation의 백스택 관리와 ReactSurface 생명주기의 불일치
-- RN Surface를 persist하기 위한 전략 (Surface 캐싱, View detach/reattach 등)
-- 브라운필드 앱에서 RN 화면 상태 유지의 실무적 해결 패턴
 
-### 완료 기준
-- 설정 → 홈 → 설정 전환 후 스크롤 위치 유지
-- 입력 폼의 텍스트와 출력 폼의 결과가 초기화되지 않음
+#### RN Surface 상태 유지의 두 가지 레이어
+
+| 레이어 | 상태 유지 방법 | 대상 |
+|--------|--------------|------|
+| RN (JS) | SurfaceHolder 캐싱 — Surface를 stop하지 않음 | 스크롤 위치, useState, TextInput 값 |
+| Compose (Native) | `rememberSaveable` — Navigation saveState 연동 | TextField 값, 불러온 텍스트 등 |
+
+#### `remember` vs `rememberSaveable`
+- `remember`: Composable이 composition에서 제거되면 상태 소멸
+- `rememberSaveable`: Navigation의 `saveState`/`restoreState`, 화면 회전에도 상태 복원
+- **규칙**: 탭 전환 시 유지해야 할 UI 상태는 반드시 `rememberSaveable` 사용
+
+#### View detach/reattach 패턴
+```kotlin
+// Composable dispose 시: View만 부모에서 분리
+(surface.view?.parent as? ViewGroup)?.removeView(surface.view)
+
+// Composable 재생성 시: AndroidView factory에서 같은 View 재사용
+AndroidView(factory = { surface.view!! })
+```
+- `removeView` 없이 재사용하면 `"The specified child already has a parent"` 에러 발생
+- Surface 자체는 살아있으므로 View를 다시 붙이면 기존 상태 그대로 렌더링
+
+### 완료 기준 [달성]
+- [x] 설정 → 홈 → 설정 전환 후 스크롤 위치 유지
+- [x] RN 화면의 입력 폼 텍스트와 출력 폼 결과가 초기화되지 않음
+- [x] 네이티브 홈 화면의 입력/출력 상태도 탭 전환 시 유지
 
 ---
 
